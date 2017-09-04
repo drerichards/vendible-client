@@ -5,9 +5,7 @@ class NavBar extends Component {
     render() {
         return (
             <div className="nav-position">
-                <nav
-                    role="navigation"
-                    className="navbar navbar-expand-lg navbar-light navigation">
+                <nav className="navbar navbar-expand-lg navbar-light navigation">
                     <a
                         className="navbar-brand"
                         style={{
