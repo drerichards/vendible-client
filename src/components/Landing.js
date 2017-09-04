@@ -1,5 +1,7 @@
 import React from 'react'
 import './css/Landing.css'
+import LoginModal from './Login_Modal'
+import Modal from './Modal'
 
 const Landing = () => {
     return (
@@ -66,6 +68,7 @@ const Landing = () => {
                     </div>
                 </header>
             </main>
+
         </div>
     )
 }

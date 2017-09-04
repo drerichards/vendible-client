@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './css/NavBar.css'
 
-class NavBar extends Component {
+export default class NavBar extends Component {
     render() {
         return (
             <div className="nav-position">
@@ -55,10 +55,13 @@ class NavBar extends Component {
                                 <a href="/">Google Sign In</a>
                             </button>
                         </div>
+                        <a className="shopcart" href="/shopping_cart">
+                            <img
+                                src="http://icons.iconarchive.com/icons/graphicloads/100-flat/32/shopping-icon.png"
+                                alt="cart"/> 0 item(s)</a> 
                     </div>
                 </nav>
             </div>
         )
     }
 }
-export default NavBar

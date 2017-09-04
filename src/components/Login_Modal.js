@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
 
-const LoginModal = () => {
-    return (
-        <div>
-            <h1>Login Modal</h1>
-        </div>
-    )
+export default class LoginModal extends Component {
+    render() {
+        return (
+            <div>
+                <h1>Login</h1>
+            </div>
+        )
+    }
 }
-
-export default LoginModal
