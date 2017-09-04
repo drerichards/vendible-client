@@ -1,8 +1,4 @@
-    .deptContainer {
-        /* width: 55%; */
-    }
-
-    .deptContainer li {
+.deptContainer li {
         background-color: #96897B;
         padding: 2%;
         font-size: 1.25em;

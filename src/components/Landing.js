@@ -28,6 +28,9 @@ const Landing = () => {
                                     <div className="carousel-caption d-none d-md-block">
                                         <h1>All the best brands</h1>
                                         <h3>All in one place!</h3>
+                                        <button type="button" className="btn btn-primary">
+                                            <a href="/departments">Shop Now!</a>
+                                        </button>
                                     </div>
                                 </div>
                                 <div className="carousel-item">

@@ -1,4 +1,8 @@
-.navigation {
+.nav-position{
+    position: static;
+}
+    
+    .navigation {
     background-color: #628395;
     padding: 0.5% 10%;
     width: 100%;

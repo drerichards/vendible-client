@@ -4,7 +4,7 @@ import './css/NavBar.css'
 class NavBar extends Component {
     render() {
         return (
-            <div className="nav-position">
+            <div>
                 <nav
                     role="navigation"
                     className="navbar navbar-expand-lg navbar-light navigation">
@@ -48,13 +48,7 @@ class NavBar extends Component {
                             role="group"
                             aria-label="Button group with nested dropdown">
                             <button type="button" className="btn btn-secondary">
-                                <a href="/user/account_signup">Sign Up</a>
-                            </button>
-                            <button type="button" className="btn btn-secondary">
-                                <a href="/user/login">Login</a>
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                <a href="#">Google Sign In</a>
+                                <a href="/user/account_signup">Logout</a>
                             </button>
                         </div>
                     </div>
