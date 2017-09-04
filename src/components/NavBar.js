@@ -11,7 +11,7 @@ class NavBar extends Component {
                         style={{
                         color: '#C2E812'
                     }}
-                        href="#">Vendible</a>
+                        href="/">Vendible</a>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -31,13 +31,13 @@ class NavBar extends Component {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                                <a className="nav-link" href="/">About</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/departments">Shop</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
+                                <a className="nav-link" href="/">Contact</a>
                             </li>
                         </ul>
 
@@ -52,7 +52,7 @@ class NavBar extends Component {
                                 <a href="/user/login">Login</a>
                             </button>
                             <button type="button" className="btn btn-primary">
-                                <a href="#">Google Sign In</a>
+                                <a href="/">Google Sign In</a>
                             </button>
                         </div>
                     </div>

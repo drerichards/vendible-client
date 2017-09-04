@@ -38,7 +38,7 @@ export default class ProductDisplay extends Component {
             }
         ]
         const productDisplay = inventory.map((item, index) => <li key={index}>
-            <img src={item.image}/>
+            <img src={item.image} alt="shirt"/>
             <h4>{item.title}</h4>
             <p>{item.price}</p>
         </li>)
