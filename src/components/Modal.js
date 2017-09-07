@@ -16,7 +16,7 @@ export default class Modal extends Component {
         this._render()
     }
 
-    componentWIllMount() {
+    componentWIllUnmount() {
         ReactDOM.unmountComponentAtNode(this.modalTarget)
         document.body.removeChild(this.modalTarget)
     }
