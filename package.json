@@ -2,20 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/auth/google": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com/"
-    },
-    "/api/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com/"
-    },
-    "/user/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com/"
-    },
-    "/inventory/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com/"
-    }
-  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.26.0",

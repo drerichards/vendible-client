@@ -7,12 +7,12 @@ import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
 
 export const fetchUser = () => async dispatch => {
-    const res = await axios.get('/api/current_user')
+    const res = await axios.get(process.env.HOST+'/api/current_user')
     dispatch({ type: FETCH_USER, payload: res.data })
 }
 
 export const fetchProducts = (dept) => async dispatch => {
-    const route = `/inventory/${dept.toLowerCase()}`
+    const route = process.env.HOST+`/inventory/${dept.toLowerCase()}`
     const res = await axios.get(route)
     dispatch({ type: FETCH_PRODUCTS, payload: res.data })
 }
