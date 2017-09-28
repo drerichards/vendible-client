@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {Router, Route} from 'react-router-dom'
+import { Route} from 'react-router-dom'
+import { BrowserRouter as Router } from 'browser-router'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -19,16 +20,16 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Router history={history}>
+                <BrowserRouter history={history}>
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
-                        <Route exact path='/signup' component={AccountSignup}/>
-                        <Route exact path='/departments' component={Departments}/>
-                        <Route exact path='/product_display' component={ProductDisplay}/>
-                        <Route exact path='/shopping_cart' component={ShoppingCart}/>
+                        {/* <Route path='/signup' component={AccountSignup}/> */}
+                        <Route path='/departments' component={Departments}/>
+                        <Route path='/product_display' component={ProductDisplay}/>
+                        <Route path='/shopping_cart' component={ShoppingCart}/>
                     </div>
-                </Router>
+                </BrowserRouter>
             </div>
         )
     }
