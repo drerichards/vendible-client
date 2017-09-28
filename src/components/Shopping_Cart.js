@@ -1,42 +1,46 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { removeFromCart } from '../actions/index'
+import Payment from './Payment'
 import './css/Shopping_Cart.css'
+import icon from '../images/remove.png'
 
-export default class ShoppingCart extends Component {
+class ShoppingCart extends Component {
+    clickRemove(index) {
+        this.props.dispatch(removeFromCart(index))
+    }
+
     render() {
-        const cartItems = [
-            {
-                image: 'http://www.iconsdb.com/icons/preview/barbie-pink/t-shirt-xxl.png',
-                title: 'Pink Shirt',
-                price: 12.99
-            }, {
-                image: 'http://www.iconsdb.com/icons/preview/caribbean-blue/t-shirt-xxl.png',
-                title: 'Blue Shirt',
-                price: 6.99
-            }
-        ]
+        const cartItems = this.props.cart
+        let total
+        if (!total) { total = 0 }
         const cartDisplay = cartItems.map((item, index) => <li key={index}>
-            <img src={item.image} alt="shirt"/>
-            <h6>{item.title}</h6>
-            <p>${item.price}</p>
+            <img className='cartPic' src={item[0]} alt={item[1]} />
+            <h6><strong>{item[1]}</strong></h6>
+            <p>${item[2].substr(1)}</p>
+            <span className='removeItem'>
+                <button className='btn btn-warning' onClick={() => this.clickRemove(index)}><img src={icon} alt='Remove Item' /> Remove</button></span>
         </li>)
         let items = []
-        var total
-        for(let i=0; i < cartItems.length; i++){
-            items.push(cartItems[i].price)
+        for (let i = 0; i < cartItems.length; i++) {
+            items.push(parseFloat(cartItems[i][2].substr(1)))
             total = items.reduce((a, b) => a + b)
+            total = total.toFixed(2)
         }
-        
+
         return (
-            <div className="container bodyContainer cartContainer">
+            <div className='container bodyContainer cartContainer'>
                 <h1>Shopping Cart: {cartItems.length} item(s)</h1>
                 <ul>
                     {cartDisplay}
                 </ul>
                 <div>
-                    <button>Checkout</button>
-                    <h5>Subtotal: ${total.toFixed(2)}</h5>
+                    <Payment total={total} />
+                    <h5>Subtotal: <strong>${total}</strong></h5>
                 </div>
             </div>
         )
     }
 }
+const mapStateToProps = state => ({ cart: state.cart })
+export default connect(mapStateToProps)(ShoppingCart)

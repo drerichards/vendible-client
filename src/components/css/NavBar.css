@@ -26,6 +26,20 @@
 }
 
 .shopcart{
-    margin: 0 1%;
+    display: inline-block;
+}
+
+.right{
+    width: 45%;
+    text-align: right;
+}
+
+input {
+    display: inline;
+}
+
+.userName{
+    margin: 0 5%;
+    display: inline-block;
     color: #fff;
 }

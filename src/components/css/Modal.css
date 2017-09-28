@@ -1,15 +1,61 @@
 .modal {
     position: fixed;
-    width: 300px;
+    width: 20%;
+    min-width: 600px;
+    min-height: 500px;
     top: 25%;
     bottom: 25%;
     left: 0;
     right: 0;
     margin: auto;
     overflow: auto;
-    padding: 20px;
-    display: block;
-    position: absolute;
-    z-index: 1;
+    padding: 3% 1%;
+    z-index: 200;
     background-color: #fff;
+    box-shadow: 1px 1px 55px #888888;
+    overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.modalTitle{
+   margin: 0 0 5%;
+   color: #C2E812;
+   text-shadow: 1px 1px #838383;
+   padding: 2% 0;
+   font-size: 2.5em;
+   background-color: #CC8B86;
+}
+
+.form-group{
+  text-align: left;
 }

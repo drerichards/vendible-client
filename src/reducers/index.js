@@ -1,6 +1,14 @@
-import {combineReducers} from 'redux'
-import apparelReducer from './apparelReducer'
-import electronicsReducer from './electronicsReducer'
-import homegoodsReducer from './homegoodsReducer'
+import { combineReducers } from 'redux'
+import deptReducer from './deptReducer'
+import authReducer from './authReducer'
+import inventoryReducer from './inventoryReducer'
+import modalReducer from './modalReducer'
+import cartReducer from './cartReducer'
 
-export default combineReducers({apparel: apparelReducer, electronics: electronicsReducer, homegoods: homegoodsReducer})
+export default combineReducers({
+    departments: deptReducer,
+    auth: authReducer,
+    inventory: inventoryReducer,
+    modal: modalReducer,
+    cart: cartReducer
+})

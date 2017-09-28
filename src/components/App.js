@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import {BrowserRouter, Route} from 'react-router-dom'
-// import {connect} from 'react-redux'
-// import * as actions from '../actions'
+import {Router, Route} from 'react-router-dom'
+import {connect} from 'react-redux'
+import * as actions from '../actions'
+import createBrowserHistory from 'history/createBrowserHistory'
 
 import NavBar from './NavBar'
 import Landing from './Landing'
@@ -9,27 +10,28 @@ import AccountSignup from './Account_SignUp'
 import Departments from './Departments'
 import ProductDisplay from './Product_Display'
 import ShoppingCart from './Shopping_Cart'
-import LoginModal from './Login_Modal'
-import ProductModal from './Product_Modal'
+const history = createBrowserHistory()
 
 class App extends Component {
+    componentDidMount() {
+        this.props.fetchUser()
+    }
     render() {
         return (
             <div>
-                <BrowserRouter>
+                <Router history={history}>
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
-                        <Route exact path='/user/account_signup' component={AccountSignup}/>
-                        <Route exact path='/user/login' component={LoginModal}/>
-                        <Route exact path='/departments' component={Departments}/>
-                        <Route exact path='/product_display' component={ProductDisplay}/>
-                        <Route exact path='/product_display/detail' component={ProductModal}/>
-                        <Route exact path='/shopping_cart' component={ShoppingCart}/>
+                        <Route path='/signup' component={AccountSignup}/>
+                        <Route path='/departments' component={Departments}/>
+                        <Route path='/product_display' component={ProductDisplay}/>
+                        <Route path='/shopping_cart' component={ShoppingCart}/>
                     </div>
-                </BrowserRouter>
+                </Router>
             </div>
         )
     }
 }
-export default App
+
+export default connect(null, actions)(App)
