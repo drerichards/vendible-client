@@ -5,14 +5,15 @@ import { SHOW_MODAL } from './types'
 import { HIDE_MODAL } from './types'
 import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
+const host = 'https://glacial-wildwood-37638.herokuapp.com'
 
 export const fetchUser = () => async dispatch => {
-    const res = await axios.get(process.env.HOST+'/api/current_user')
+    const res = await axios.get(`${host}/api/current_user`)
     dispatch({ type: FETCH_USER, payload: res.data })
 }
 
 export const fetchProducts = (dept) => async dispatch => {
-    const route = process.env.HOST+`/inventory/${dept.toLowerCase()}`
+    const route = `${host}/inventory/${dept.toLowerCase()}`
     const res = await axios.get(route)
     dispatch({ type: FETCH_PRODUCTS, payload: res.data })
 }
