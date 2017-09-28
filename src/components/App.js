@@ -23,10 +23,10 @@ class App extends Component {
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
-                        <Route path='/signup' component={AccountSignup}/>
-                        <Route path='/departments' component={Departments}/>
-                        <Route path='/product_display' component={ProductDisplay}/>
-                        <Route path='/shopping_cart' component={ShoppingCart}/>
+                        <Route exact path='/signup' component={AccountSignup}/>
+                        <Route exact path='/departments' component={Departments}/>
+                        <Route exact path='/product_display' component={ProductDisplay}/>
+                        <Route exact path='/shopping_cart' component={ShoppingCart}/>
                     </div>
                 </Router>
             </div>
