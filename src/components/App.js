@@ -7,7 +7,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 import NavBar from './NavBar'
 import Landing from './Landing'
-import AccountSignup from './Account_SignUp'
+// import AccountSignup from './Account_SignUp'
 import Departments from './Departments'
 import ProductDisplay from './Product_Display'
 import ShoppingCart from './Shopping_Cart'
