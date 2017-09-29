@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Router, Route} from 'react-router-dom'
-import { BrowserRouter as Router } from 'browser-router'
+// import { BrowserRouter as Router } from 'browser-router'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
 import createBrowserHistory from 'history/createBrowserHistory'
