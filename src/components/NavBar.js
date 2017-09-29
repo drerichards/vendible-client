@@ -32,9 +32,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div className='nav-position'
-
-            >
+            <div className='nav-position'>
                 <nav className='navbar navbar-expand-lg navbar-light navigation'>
                     <a className='navbar-brand' style={{ color: '#C2E812' }} href='/' onClick={() => this.props.dispatch(hideModal())}>Vendible</a>
                     <button
