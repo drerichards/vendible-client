@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Route} from 'react-router-dom'
+import {Router, Route} from 'react-router-dom'
 import { BrowserRouter as Router } from 'browser-router'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
@@ -20,7 +20,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter history={history}>
+                <Router history={history}>
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
@@ -29,7 +29,7 @@ class App extends Component {
                         <Route path='/product_display' component={ProductDisplay}/>
                         <Route path='/shopping_cart' component={ShoppingCart}/>
                     </div>
-                </BrowserRouter>
+                </Router>
             </div>
         )
     }
