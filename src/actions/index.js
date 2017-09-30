@@ -5,11 +5,21 @@ import { SHOW_MODAL } from './types'
 import { HIDE_MODAL } from './types'
 import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
+import { GOOGLE_AUTH } from './types'
 const host = 'https://glacial-wildwood-37638.herokuapp.com'
 
 export const fetchUser = () => async dispatch => {
     const res = await axios.get(`${host}/api/current_user`)
     dispatch({ type: FETCH_USER, payload: res.data })
+}
+export const googleAuth = () => async dispatch => {
+    const res = await axios.get(`${host}/auth/google`)
+    dispatch({ type: FETCH_USER, payload: res.data })
+    console.log('srgf')
+}
+
+export const googleLogout = () => {
+
 }
 
 export const fetchProducts = (dept) => async dispatch => {
