@@ -5,7 +5,7 @@ import { SHOW_MODAL } from './types'
 import { HIDE_MODAL } from './types'
 import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
-import { GOOGLE_AUTH } from './types'
+// import { GOOGLE_AUTH } from './types'
 const host = 'https://glacial-wildwood-37638.herokuapp.com'
 
 export const fetchUser = () => async dispatch => {
