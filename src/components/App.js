@@ -22,11 +22,11 @@ class App extends Component {
                 <Router history={history}>
                     <div>
                         <NavBar/>
-                        <Route exact path='/' component={Landing}/>
+                        <Route exact path='/https://glacial-wildwood-37638.herokuapp.com' component={Landing}/>
                         {/* <Route path='/signup' component={AccountSignup}/> */}
-                        <Route path='/departments' component={Departments}/>
-                        <Route path='/product_display' component={ProductDisplay}/>
-                        <Route path='/shopping_cart' component={ShoppingCart}/>
+                        <Route path='/https://glacial-wildwood-37638.herokuapp.com/departments' component={Departments}/>
+                        <Route path='/https://glacial-wildwood-37638.herokuapp.com/product_display' component={ProductDisplay}/>
+                        <Route path='/https://glacial-wildwood-37638.herokuapp.com/shopping_cart' component={ShoppingCart}/>
                     </div>
                 </Router>
             </div>

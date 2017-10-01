@@ -12,16 +12,16 @@ class NavBar extends Component {
                 return
             case false:
                 return <div onClick={() => this.props.dispatch(hideModal())}>
-                    <a className='shopcart' href='/shopping_cart'>
+                    <a className='shopcart' href='https://glacial-wildwood-37638.herokuapp.com/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Hello {this.props.auth.first_name}!</p>
                     <button type='button' className='btn btn-secondary'>
-                        <a href='/api/logout'>Logout</a></button>
+                        <a href='https://glacial-wildwood-37638.herokuapp.com/api/logout'>Logout</a></button>
                 </div>
             default:
                 return <div>
                     <button type='button' className='btn btn-info'>
-                        <a href='/auth/google'>Google Sign In</a></button>
+                        <a href='https://glacial-wildwood-37638.herokuapp.com/auth/google'>Google Sign In</a></button>
                 </div>
         }
     }
