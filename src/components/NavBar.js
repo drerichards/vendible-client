@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { hideModal } from '../actions/index'
+import { hideModal, fetchUser } from '../actions/index'
 import Modal from './Modal'
 import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
@@ -12,7 +12,7 @@ class NavBar extends Component {
                 return
             case false:
                 return <div onClick={() => this.props.dispatch(hideModal())}>
-                    <a className='shopcart' href='https://glacial-wildwood-37638.herokuapp.com/shopping_cart'>
+                    <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Hello {this.props.auth.first_name}!</p>
                     <button type='button' className='btn btn-secondary'>
@@ -20,7 +20,7 @@ class NavBar extends Component {
                 </div>
             default:
                 return <div>
-                    <button type='button' className='btn btn-info'>
+                    <button type='button' className='btn btn-info' onClick={() => this.props.dispatch(fetchUser())}>
                         <a href='https://glacial-wildwood-37638.herokuapp.com/auth/google'>Google Sign In</a></button>
                 </div>
         }
