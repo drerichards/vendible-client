@@ -7,6 +7,7 @@ import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
     renderContent() {
+        console.log(this.props.auth, 'nav')
         switch (!this.props.auth) {
             case null:
                 return
