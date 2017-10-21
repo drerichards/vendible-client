@@ -2,6 +2,20 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:5000"
+    },
+    "/api/*": {
+      "target": "http://localhost:5000"
+    },
+    "/user/*": {
+      "target": "http://localhost:5000"
+    },
+    "/inventory/*": {
+      "target": "http://localhost:5000"
+    }
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.26.0",
@@ -19,7 +33,6 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13",
     "react-stripe-checkout": "^2.6.3",
-    "react-transition-group": "^2.2.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },
