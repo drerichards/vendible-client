@@ -1,3 +1,4 @@
+export const API_URL = 'https://glacial-wildwood-37638.herokuapp.com'
 export const FETCH_USER = 'fetch_user'
 export const FETCH_PRODUCTS = 'fetch_products'
 export const SHOW_MODAL = 'show_modal'
