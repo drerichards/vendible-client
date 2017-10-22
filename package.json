@@ -4,16 +4,16 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "http://localhost:5000/"
     },
     "/api/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "http://localhost:5000/"
     },
     "/user/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "http://localhost:5000/"
     },
     "/inventory/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "http://localhost:5000/"
     }
   },
   "dependencies": {
@@ -37,7 +37,7 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "HOST=`glacial-wildwood-37638.herokuapp.com` react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
