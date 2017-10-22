@@ -16,6 +16,7 @@
       "target": "http://localhost:5000/"
     }
   },
+  "homepage": "https://drerichards.github.io/Vendible/",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.26.0",
