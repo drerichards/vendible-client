@@ -14,7 +14,7 @@ export const fetchUser = () => async dispatch => {
 }
 
 export const fetchProducts = (dept) => async dispatch => {
-    const route = `/inventory/${dept.toLowerCase()}`
+    const route = `${API_URL}/inventory/${dept.toLowerCase()}`
     const res = await axios.get(route)
     dispatch({ type: FETCH_PRODUCTS, payload: res.data })
 }
