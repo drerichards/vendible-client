@@ -4,16 +4,16 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "http://localhost:5000/"
+      "target": "https://glacial-wildwood-37638.herokuapp.com"
     },
     "/api/*": {
-      "target": "http://localhost:5000/"
+      "target": "https://glacial-wildwood-37638.herokuapp.com"
     },
     "/user/*": {
-      "target": "http://localhost:5000/"
+      "target": "https://glacial-wildwood-37638.herokuapp.com"
     },
     "/inventory/*": {
-      "target": "http://localhost:5000/"
+      "target": "https://glacial-wildwood-37638.herokuapp.com"
     }
   },
   "homepage": "https://drerichards.github.io/Vendible/",
