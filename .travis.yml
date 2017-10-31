@@ -1,9 +1,0 @@
-language: node_js
-node_js: node
-deploy:
-  provider: heroku
-  api_key:
-    secure: dwlPyCQFMdzYKSlIOMJDtH0t6gkMqbEKgjdr6nSsuOed2hKM8mr54FedpgBRnTAnbq3qNm4d7xen8b01XaKe/SYh4bCj/aMYntxrA9p83Tcq8/LqKqzh0NfkA7baJ16epjtMhQePWIxz5S0GDgMWcNuQH7F+r9H+6cYEeXW/657clCao+AZsYMHXVvndeAwIxySNLjlnGd5DjB1s6Q8xAfzoTYjJHsimqUtkbnQS3XnlcQa2ryNyJHGS+ZZ7G+GqNC8Q/6M2C2+GR+s/JlHWIYlHGRLhGL8G+voB9S6VzXyCV24HJ7ALlP1BxRokC68xa5wMR0jyfx6eFcVGGXW4AFk7/7ndoFb8LJOrBILNmRHuNmPkitj5mmui9OL+ifTbe5tPhdRLZbXbEmM+qYc94gbXXkvphMWBGqamNY4Xc53Is8GPalJpmUsYyQUYDyFjSV2HS4nt4uhISVQHh0nloAIGFewXCCzxLrpA4popeYCH1G9vMiC5xdYAhXMVwE3xkkHZlV5bJ4N8UZKjv/EmsvBVlbLPA2pe/yO5C+LWnEw0oUxQLhd8ksxMD199P0/G1evfcps7DaflWECe0lGWAhNmLThjCfmYki3BSp/RV4/L6AG3bxX84L5ANkfSSB9QBXa8OUjheuFcfmUaXdc58rt6mYXTLYlr2B6QiouAUpA=
-  app: Vendible
-  on:
-    repo: drerichards/Vendible
