@@ -4,16 +4,16 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     },
     "/api/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     },
     "/user/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     },
     "/inventory/*": {
-      "target": "https://glacial-wildwood-37638.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     }
   },
   "dependencies": {
