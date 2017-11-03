@@ -13,7 +13,7 @@ const history = createBrowserHistory()
 
 class App extends Component {
     componentDidMount() {
-        this.props.fetchUser()
+        setTimeout( () => this.props.fetchUser(), 3000)
     }
     render() {
         return (
