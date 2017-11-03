@@ -33,6 +33,8 @@ class NavBar extends Component {
     render() {
         return (
             <div className='nav-position'>
+              <button type='button' className='btn btn-primary'>
+                  <a href='https://infinite-dusk-81657.herokuapp.com/auth/google'>Google Sign In</a></button>
                 <nav className='navbar navbar-expand-lg navbar-light navigation'>
                     <a className='navbar-brand' style={{ color: '#C2E812' }} href='/' onClick={() => this.props.dispatch(hideModal())}>Vendible</a>
                     <button
