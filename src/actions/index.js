@@ -13,16 +13,20 @@ import { EMPTY_CART } from './types'
 //     console.log(res)
 //     dispatch({ type: FETCH_USER, payload: res.data })
 // }
-export const fetchUser = name => {
-    console.log(name)
-    
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    window.history.pushState("Vendible", "Title", "/")
-    console.log(results)
-    console.log(window.params)
+export const fetchUser = () => {
+    var urlParams = new URLSearchParams(window.location.search)
+    console.log(urlParams)
+    var entries = urlParams.entries();
+    for (pair of entries) {
+        console.log(pair[0]);
+    }
+    // name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    // var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    // var results = regex.exec(location.search);
+    // results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    // window.history.pushState("Vendible", "Title", "/")
+    // console.log(results)
+    // console.log(window.params)
     // dispatch({ type: FETCH_USER, payload: results })
 }
 export const fetchProducts = dept => async dispatch => {
