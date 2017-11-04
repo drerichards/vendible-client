@@ -21,7 +21,8 @@ class App extends Component {
                 <Router history={history}>
                     <div>
                         <NavBar/>
-                        <Route exact path='/' component={Landing}/>
+                        <Route exact path='/' component={Landing} />
+                        <Route exact path='/post' component={Landing}/>
                         <Route path='/departments' component={Departments}/>
                         <Route path='/product_display' component={ProductDisplay}/>
                         <Route path='/shopping_cart' component={ShoppingCart}/>
