@@ -2,20 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/auth/google": {
-      "target": "https://stormy-fortress-32507.herokuapp.com"
-    },
-    "/api/*": {
-      "target": "https://stormy-fortress-32507.herokuapp.com"
-    },
-    "/user/*": {
-      "target": "https://stormy-fortress-32507.herokuapp.com"
-    },
-    "/inventory/*": {
-      "target": "https://stormy-fortress-32507.herokuapp.com"
-    }
-  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.26.0",
