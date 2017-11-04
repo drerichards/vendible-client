@@ -14,6 +14,8 @@ import { EMPTY_CART } from './types'
 //     dispatch({ type: FETCH_USER, payload: res.data })
 // }
 export const fetchUser = name => {
+    console.log(name)
+    
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
@@ -21,7 +23,7 @@ export const fetchUser = name => {
 
     console.log(results)
     console.log(window.params)
-    // dispatch({ type: FETCH_USER, payload: res.data })
+    dispatch({ type: FETCH_USER, payload: results })
 }
 export const fetchProducts = dept => async dispatch => {
     const route = `${API_URL}/inventory/${dept.toLowerCase()}`
