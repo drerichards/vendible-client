@@ -23,10 +23,10 @@ class App extends Component {
                     <div>
                         <NavBar/>
                         <Route exact path={URL} component={Landing} />
-                        <Route path={`${URL}/post:first_name`} component={Landing}/>
-                        <Route path={`${URL}/departments`} component={Departments}/>
-                        <Route path={`${URL}/product_display`} component={ProductDisplay}/>
-                        <Route path={`${URL}/shopping_cart`} component={ShoppingCart}/>
+                        <Route path={URL+'/post:first_name'} component={Landing}/>
+                        <Route path={URL+'/departments'} component={Departments}/>
+                        <Route path={URL+'/product_display'} component={ProductDisplay}/>
+                        <Route path={URL+'/shopping_cart'} component={ShoppingCart}/>
                     </div>
                 </Router>
             </div>
