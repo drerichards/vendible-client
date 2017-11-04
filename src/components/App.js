@@ -9,8 +9,8 @@ import Landing from './Landing'
 import Departments from './Departments'
 import ProductDisplay from './Product_Display'
 import ShoppingCart from './Shopping_Cart'
-const history = createBrowserHistory(),
-    URL = 'https://vendible.netlify.com/'
+const history = createBrowserHistory()
+    // URL = 'https://vendible.netlify.com/'
 
 class App extends Component {
     componentDidMount() {
@@ -22,11 +22,11 @@ class App extends Component {
                 <Router history={history}>
                     <div>
                         <NavBar/>
-                        <Route exact path={URL} component={Landing} />
-                        <Route path={URL+'/post:first_name'} component={Landing}/>
-                        <Route path={URL+'/departments'} component={Departments}/>
-                        <Route path={URL+'/product_display'} component={ProductDisplay}/>
-                        <Route path={URL+'/shopping_cart'} component={ShoppingCart}/>
+                        <Route exact path='/' component={Landing} />
+                        <Route path='/post:first_name' component={Landing}/>
+                        <Route path='/departments' component={Departments}/>
+                        <Route path='/product_display' component={ProductDisplay}/>
+                        <Route path='/shopping_cart' component={ShoppingCart}/>
                     </div>
                 </Router>
             </div>
