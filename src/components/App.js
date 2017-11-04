@@ -22,7 +22,7 @@ class App extends Component {
                 <Router history={history}>
                     <div>
                         <NavBar/>
-                        <Route exact path='https://google.com' component={Landing} />
+                        <Route exact path='/' component={Landing} />
                         <Route path='/post:first_name' component={Landing}/>
                         <Route path='/departments' component={Departments}/>
                         <Route path='/product_display' component={ProductDisplay}/>
