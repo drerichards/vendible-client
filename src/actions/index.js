@@ -20,7 +20,7 @@ export const fetchUser = name => {
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-
+    window.history.pushState("Vendible", "Title", "/")
     console.log(results)
     console.log(window.params)
     dispatch({ type: FETCH_USER, payload: results })
