@@ -8,19 +8,28 @@ import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
 
-export const fetchUser = () => async dispatch => {
-    const res = await axios.get(API_URL+'/api/current_user')
-    console.log(res)
-    dispatch({ type: FETCH_USER, payload: res.data })
-}
+// export const fetchUser = () => async dispatch => {
+//     const res = await axios.get(API_URL+'/api/current_user')
+//     console.log(res)
+//     dispatch({ type: FETCH_USER, payload: res.data })
+// }
+export const fetchUser = name => {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 
-export const fetchProducts = (dept) => async dispatch => {
+    console.log(results)
+    console.log(window.params)
+    // dispatch({ type: FETCH_USER, payload: res.data })
+}
+export const fetchProducts = dept => async dispatch => {
     const route = `${API_URL}/inventory/${dept.toLowerCase()}`
     const res = await axios.get(route)
     dispatch({ type: FETCH_PRODUCTS, payload: res.data })
 }
 
-export const showModal = (displayInfo) => {
+export const showModal = displayInfo => {
         const displayArr = [
             displayInfo[0].currentSrc,
             displayInfo[1].innerHTML,
@@ -34,15 +43,15 @@ export const hideModal = () => {
     return { type: HIDE_MODAL }
 }
 
-export const addToCart = (item) => {
+export const addToCart = item => {
     return { type: ADD_TO_CART, payload: item }
 }
 
-export const removeFromCart = (index) => {
+export const removeFromCart = index => {
     return { type: REMOVE_FROM_CART, payload: index }
 }
 
-export const handleToken = (cartTotal) => {
+export const handleToken = cartTotal => {
     alert(`Thank You for your Purchase of ${cartTotal}!`)
     return { type: EMPTY_CART }
 }
