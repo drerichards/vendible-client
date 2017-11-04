@@ -4,16 +4,16 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "http://stormy-fortress-32507.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     },
     "/api/*": {
-      "target": "http://stormy-fortress-32507.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     },
     "/user/*": {
-      "target": "http://stormy-fortress-32507.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     },
     "/inventory/*": {
-      "target": "http://stormy-fortress-32507.herokuapp.com"
+      "target": "https://stormy-fortress-32507.herokuapp.com"
     }
   },
   "dependencies": {
