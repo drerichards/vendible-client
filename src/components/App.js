@@ -10,7 +10,7 @@ import Departments from './Departments'
 import ProductDisplay from './Product_Display'
 import ShoppingCart from './Shopping_Cart'
 const history = createBrowserHistory(),
-    URL = 'https://salty-sands-12333.herokuapp.com'
+    URL = 'https://vendible.netlify.com/'
 
 class App extends Component {
     componentDidMount() {
