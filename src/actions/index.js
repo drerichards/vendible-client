@@ -8,23 +8,23 @@ import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
 
-// export const fetchUser = () => async dispatch => {
-//     const res = await axios.get(API_URL+'/api/current_user')
-//     console.log(res)
-//     dispatch({ type: FETCH_USER, payload: res.data })
-// }
-export const fetchUser = name => {
-    console.log(name)
-    
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    window.history.pushState("Vendible", "Title", "/")
-    console.log(results)
-    console.log(window.params)
-    dispatch({ type: FETCH_USER, payload: results })
+export const fetchUser = () => async dispatch => {
+    const res = await axios.get(API_URL+'/api/current_user')
+    console.log(res)
+    dispatch({ type: FETCH_USER, payload: res.data })
 }
+// export const fetchUser = name => {
+//     console.log(name)
+    
+//     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+//     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+//     var results = regex.exec(location.search);
+//     results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+//     window.history.pushState("Vendible", "Title", "/")
+//     console.log(results)
+//     console.log(window.params)
+//     dispatch({ type: FETCH_USER, payload: results })
+// }
 export const fetchProducts = dept => async dispatch => {
     const route = `${API_URL}/inventory/${dept.toLowerCase()}`
     const res = await axios.get(route)
