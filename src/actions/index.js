@@ -14,10 +14,10 @@ import { EMPTY_CART } from './types'
 //     dispatch({ type: FETCH_USER, payload: res.data })
 // }
 export const fetchUser = () => {
-    var urlParams = new URLSearchParams(window.location.search)
+    let urlParams = new URLSearchParams(window.location.search)
     console.log(urlParams)
-    var entries = urlParams.entries();
-    for (pair of entries) {
+    let entries = urlParams.entries();
+    for (let pair of entries) {
         console.log(pair[0]);
     }
     // name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
