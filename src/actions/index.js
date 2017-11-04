@@ -14,12 +14,12 @@ import { EMPTY_CART } from './types'
 //     dispatch({ type: FETCH_USER, payload: res.data })
 // }
 export const fetchUser = () => {
-    let urlParams = new URLSearchParams(window.location.search)
-    console.log(urlParams)
-    let entries = urlParams.entries();
-    for (let pair of entries) {
-        console.log(pair[0]);
-    }
+    // let urlParams = new URLSearchParams(window.location.search)
+    console.log('urlParams')
+    // let entries = urlParams.entries();
+    // for (let pair of entries) {
+    //     console.log(pair[0]);
+    // }
     // name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     // var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     // var results = regex.exec(location.search);
