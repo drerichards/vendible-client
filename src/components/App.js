@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Router, Route } from 'react-router-dom'
+import { browserRouter as Router, Route } from 'react-router-dom'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -15,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Router history={history}>
+                <Router>
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
