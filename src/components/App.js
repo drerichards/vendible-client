@@ -37,4 +37,4 @@ class App extends Component {
     }
 }
 
-export default connect(null, actions)(App)
+export default connect()(App)
