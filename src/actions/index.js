@@ -9,7 +9,7 @@ import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
 
 export const fetchUser = () => async dispatch => {
-    const res = await axios.get('/api/current_user')
+    const res = await axios.get(API_URL+'/api/current_user')
     console.log(res)
     dispatch({ type: FETCH_USER, payload: res.data })
 }
