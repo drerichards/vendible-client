@@ -9,10 +9,12 @@ class NavBar extends Component {
     onLogout() {
       localStorage.removeItem('userId')
       localStorage.removeItem('userEmail')
+      localStorage.removeItem('userName')
       window.location = '/'
     }
 
     renderContent() {
+        console.log(this.props.auth)
         switch (!this.props.auth.id) {
             case null:
                 return
