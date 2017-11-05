@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './css/Landing.css'
-// import LoginModal from './Login_Modal'
-// import Modal from './Modal'
 import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
+import { fetchUserSuccess } from '../actions/index'
+import { connect } from 'react-redux'
 
-const Landing = () => {
+class Landing extends Component {
+
+  componentDidMount() {
+    if(this.props.match.params.userId) {
+      localStorage.setItem('userId', this.props.match.params.userId)
+      localStorage.setItem('userEmail', this.props.match.params.userEmail)
+      this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail))
+    }
+  }
+
+  render() {
     return (
         <div>
             <main role="main">
@@ -79,5 +89,7 @@ const Landing = () => {
 
         </div>
     )
+  }
 }
-export default Landing
+
+export default connect()(Landing)

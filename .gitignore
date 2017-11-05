@@ -7,7 +7,7 @@
 /coverage
 
 # production
-.netlify
+/build
 
 # misc
 .DS_Store
