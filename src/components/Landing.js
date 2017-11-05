@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './css/Landing.css'
 // import LoginModal from './Login_Modal'
 // import Modal from './Modal'
@@ -6,8 +6,12 @@ import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
 
-const Landing = (props) => {
-    console.log('Props:', props);
+class Landing extends Component {
+
+  componentDidMount() {
+    console.log(this.props.match.params);
+  }
+  render() {
     return (
         <div>
             <main role="main">
@@ -80,5 +84,7 @@ const Landing = (props) => {
 
         </div>
     )
+  }
 }
+
 export default Landing

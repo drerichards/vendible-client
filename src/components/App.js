@@ -12,9 +12,6 @@ import ShoppingCart from './Shopping_Cart'
 const history = createBrowserHistory()
 
 class App extends Component {
-    componentDidMount() {
-        setTimeout( () => this.props.fetchUser(), 3000)
-    }
     render() {
         return (
             <div>
@@ -22,7 +19,7 @@ class App extends Component {
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
-                        <Route exact path='/:user' component={Landing}/>
+                        <Route exact path='/:userId/userEmail' component={Landing}/>
                         <Route path='/departments' component={Departments}/>
                         <Route path='/product_display' component={ProductDisplay}/>
                         <Route path='/shopping_cart' component={ShoppingCart}/>
