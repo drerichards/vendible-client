@@ -6,6 +6,7 @@ import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
 import { fetchUserSuccess } from '../actions/index'
+import { connect } from 'react-redux'
 
 class Landing extends Component {
 
@@ -13,8 +14,8 @@ class Landing extends Component {
     if(this.props.match.params.userId) {
       this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail))
     }
-    console.log(this.props.match.params);
   }
+
   render() {
     return (
         <div>
@@ -91,4 +92,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing
+export default connect()(Landing)
