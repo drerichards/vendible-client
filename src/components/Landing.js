@@ -12,6 +12,8 @@ class Landing extends Component {
 
   componentDidMount() {
     if(this.props.match.params.userId) {
+      localStorage.setItem('userId', this.props.match.params.userId)
+      localStorage.setItem('userEmail', this.props.match.params.userEmail)
       this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail))
     }
   }
