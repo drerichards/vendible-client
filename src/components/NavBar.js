@@ -6,7 +6,6 @@ import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
-
     onLogout() {
       localStorage.removeItem('userId')
       localStorage.removeItem('userEmail')
