@@ -18,12 +18,12 @@ class NavBar extends Component {
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Hello {this.props.auth.first_name}!</p>
                     <button type='button' className='btn btn-secondary'>
-                        <a href={'/api/logout'}>Logout</a></button>
+                        <a href='/api/logout'>Logout</a></button>
                 </div>
             default:
                 return <div>
                     <button type='button' className='btn btn-primary'>
-                        <a href={'/auth/google'}>Google Sign In</a></button>
+                        <a href='/auth/google'>Google Sign In</a></button>
                 </div>
         }
     }
