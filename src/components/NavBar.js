@@ -2,28 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { hideModal } from '../actions/index'
 import Modal from './Modal'
-// import { API_URL } from '../actions/types'
 import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
-    renderContent() {
-        // switch (!this.props.auth) {
-            // case null:
-                // return
-            // case false:
-                return <div onClick={() => this.props.dispatch(hideModal())}>
-                    <a className='shopcart' href='/shopping_cart'>
-                        <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
-                </div>
-            // default:
-                // return <div>
-                    {/* <button type='button' className='btn btn-primary'> */}
-                        {/* <a href={'/auth/google'}>Google Sign In</a></button> */}
-                // </div>
-        // }
-    }
-
     render() {
         return (
             <div className='nav-position'>
@@ -48,7 +30,12 @@ class NavBar extends Component {
                             <li className='nav-item'><a className='nav-link' href='/departments'>Shop</a></li>
                             <li className='nav-item'><a className='nav-link' href='/'>Contact</a></li>
                         </ul>
-                        <div className='right'>{this.renderContent()}</div>
+                        <div className='right'>
+                            <div onClick={() => this.props.dispatch(hideModal())}>
+                                <a className='shopcart' href='/shopping_cart'>
+                                    <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
+                            </div>
+                        </div>
                         <Modal />
                     </div>
                 </nav>
@@ -56,5 +43,5 @@ class NavBar extends Component {
         )
     }
 }
-const mapStateToProps = state => ({ auth: state.auth, cart: state.cart })
+const mapStateToProps = state => ({ cart: state.cart })
 export default connect(mapStateToProps)(NavBar)
