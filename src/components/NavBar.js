@@ -6,6 +6,13 @@ import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
+
+    onLogout() {
+      localStorage.removeItem('userId')
+      localStorage.removeItem('userEmail')
+      window.location = '/'
+    }
+
     renderContent() {
         switch (!this.props.auth.id) {
             case null:
@@ -15,8 +22,8 @@ class NavBar extends Component {
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Hello {this.props.auth.first_name}!</p>
-                    <button type='button' className='btn btn-secondary'>
-                        <a href='https://infinite-dusk-81657.herokuapp.com/api/logout'>Logout</a></button>
+                    <button type='button' className='btn btn-secondary' onClick={() => this.onLogout()}>
+                        <a>Logout</a></button>
                 </div>
             default:
                 return <div>
