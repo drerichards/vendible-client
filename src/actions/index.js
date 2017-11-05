@@ -10,8 +10,16 @@ import { EMPTY_CART } from './types'
 
 export const fetchUser = () => async dispatch => {
     const res = await axios.get(API_URL+'/api/current_user')
+    let res = {
+        _id: "59b9f984ca12ec2b106ea506",
+        googleId: "104940457039876329937",
+        first_name: "G. Andre",
+        last_name: "Richardson",
+        email: "g.andrerichards@gmail.com",
+        __v: 0
+    } 
     console.log(res)
-    dispatch({ type: FETCH_USER, payload: res.data })
+    dispatch({ type: FETCH_USER, payload: res })
 }
 
 export const fetchProducts = dept => async dispatch => {
