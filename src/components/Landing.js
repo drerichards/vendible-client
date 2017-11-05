@@ -6,7 +6,8 @@ import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
 
-const Landing = () => {
+const Landing = (props) => {
+    console.log('Props:', props);
     return (
         <div>
             <main role="main">
