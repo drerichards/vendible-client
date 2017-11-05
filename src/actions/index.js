@@ -28,6 +28,12 @@ export const showModal = (displayInfo) => {
         return { type: SHOW_MODAL, payload: displayArr }
 }
 
+export const fetchUserSuccess = (id, email) => ({
+  type: 'FETCH_USER_SUCCESS',
+  id,
+  email
+})
+
 export const hideModal = () => {
     return { type: HIDE_MODAL }
 }

@@ -5,10 +5,14 @@ import './css/Landing.css'
 import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
+import { fetchUserSuccess } from '../actions/index'
 
 class Landing extends Component {
 
   componentDidMount() {
+    if(this.props.match.params.userId) {
+      this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail))
+    }
     console.log(this.props.match.params);
   }
   render() {
