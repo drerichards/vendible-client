@@ -21,7 +21,7 @@ class NavBar extends Component {
                 return <div onClick={() => this.props.dispatch(hideModal())}>
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
-                    <p className='userName'>Signed in as: {this.props.auth.email}!</p>
+                    <p className='userName'>Signed in as: {this.props.auth.email}</p>
                     <button type='button' className='btn btn-secondary' onClick={() => this.onLogout()}>
                         <a>Logout</a></button>
                 </div>

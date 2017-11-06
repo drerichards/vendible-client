@@ -33,7 +33,7 @@ class Modal extends Component {
         if (item !== undefined) {
             var sbarItem = item[1]
             output =
-                <div>
+                <div className='modalProduct'>
                     <h3>{item[1]}</h3>
                     <img style={{ 'width': '40%' }} src={item[0]} alt={item[1]} />
                     <p><strong>Item Details:</strong> {item[3]}</p>

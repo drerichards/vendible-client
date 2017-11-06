@@ -1,12 +1,19 @@
-.deptContainer{
+    .deptContainer {
         margin: 3% auto;
         width: 70%;
-        text-align: center;        
-}
+        text-align: center;
+    }
 
-.deptContainer li {
+    .deptContainer ul a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .deptContainer li {
         background-color: #96897B;
         padding: 2%;
+        width: 40%;
         font-size: 1.25em;
         margin: 4%;
         color: #fff;
@@ -32,27 +39,33 @@
         background-color: #C2E812;
     }
 
-    .cardImg{
+    .cardImg {
         width: 70%;
         margin: 15% auto;
     }
 
-    .card{
+    .card {
         transition: all .2s ease-in-out;
-          animation-name: fadeInUp;
+        animation-name: fadeInUp;
     }
-    .card:hover{
+
+    .card:hover {
         transform: scale(1.025);
     }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
 
+    @media only screen and (min-device-width: 1000px) {
+        .deptContainer ul a {
+            flex-direction: row;
+        }
+    }
