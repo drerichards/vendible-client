@@ -8,8 +8,8 @@ import icon from '../images/shopping-icon.png'
 class NavBar extends Component {
 
     onLogout() {
-      localStorage.removeItem('userId')
-      localStorage.removeItem('userEmail')
+      localStorage.clear()
+    //   localStorage.removeItem('userEmail')
       window.location = '/'
     }
 
