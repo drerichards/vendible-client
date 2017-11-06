@@ -14,9 +14,10 @@ class App extends Component {
     componentDidMount() {
       const userId = localStorage.getItem('userId')
       const userEmail = localStorage.getItem('userEmail')
+      const userName = localStorage.getItem('userName')
 
       if(userId && userEmail) {
-        this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
+          this.props.dispatch(actions.fetchUserSuccess(userId, userEmail, userName))
       }
     }
     render() {
@@ -26,7 +27,7 @@ class App extends Component {
                     <div>
                         <NavBar/>
                         <Route exact path='/' component={Landing}/>
-                        <Route path='/:userId/:userEmail' component={Landing}/>
+                        <Route path='/:userId/:userEmail/:userName' component={Landing}/>
                         <Route path='/departments' component={Departments}/>
                         <Route path='/product_display' component={ProductDisplay}/>
                         <Route path='/shopping_cart' component={ShoppingCart}/>
