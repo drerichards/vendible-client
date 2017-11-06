@@ -8,7 +8,7 @@ import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
 
 export const fetchUser = () => async dispatch => {
-    const res = await axios.get('https://stormy-fortress-32507.herokuapp.com/api/current_user')
+    const res = await axios.get('https://infinite-dusk-81657.herokuapp.com/api/current_user')
     dispatch({ type: FETCH_USER, payload: res.data })
 }
 
