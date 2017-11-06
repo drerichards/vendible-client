@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './css/Landing.css'
-// import LoginModal from './Login_Modal'
-// import Modal from './Modal'
 import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
