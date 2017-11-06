@@ -30,6 +30,8 @@ export const showModal = (displayInfo) => {
 
 export const fetchUserSuccess = (id, email) => ({
     type: 'FETCH_USER_SUCCESS',
+    id,
+    email,
     name
 })
 
