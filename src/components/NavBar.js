@@ -7,9 +7,9 @@ import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
     onLogout() {
-      localStorage.removeItem('userId')
-      localStorage.removeItem('userEmail')
-      window.location = '/'
+        localStorage.removeItem('userId')
+        localStorage.removeItem('userEmail')
+        window.location = '/'
     }
 
     renderContent() {
@@ -20,7 +20,7 @@ class NavBar extends Component {
                 return <div onClick={() => this.props.dispatch(hideModal())}>
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
-                    <p className='userEmail'>Signed in as: {this.props.auth.email}</p>
+                    <p className='userEmail'>Signed in as: {this.props.auth.email}!</p>
                     <button type='button' className='btn btn-secondary' onClick={() => this.onLogout()}>
                         <a>Logout</a></button>
                 </div>
