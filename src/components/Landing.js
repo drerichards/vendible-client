@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './css/Landing.css'
-// import LoginModal from './Login_Modal'
-// import Modal from './Modal'
 import clothes from '../images/clothes.jpeg'
 import elec from '../images/elec.jpeg'
 import home from '../images/home.jpg'
@@ -14,8 +12,9 @@ class Landing extends Component {
     if(this.props.match.params.userId) {
       localStorage.setItem('userId', this.props.match.params.userId)
       localStorage.setItem('userEmail', this.props.match.params.userEmail)
-      this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail))
-    }
+      localStorage.setItem('userName', this.props.match.params.userName)
+      this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail, this.props.match.params.userName))
+    }}
   }
 
   render() {
