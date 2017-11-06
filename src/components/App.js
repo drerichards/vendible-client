@@ -10,7 +10,6 @@ import ProductDisplay from './Product_Display'
 import ShoppingCart from './Shopping_Cart'
 
 class App extends Component {
-
     componentDidMount() {
       const userId = localStorage.getItem('userId')
       const userEmail = localStorage.getItem('userEmail')
