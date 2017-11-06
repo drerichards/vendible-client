@@ -9,7 +9,7 @@ class NavBar extends Component {
     onLogout() {
       localStorage.removeItem('userId')
       localStorage.removeItem('userEmail')
-      localStorage.removeItem('userName')
+    //   localStorage.removeItem('userName')
       window.location = '/'
     }
 
