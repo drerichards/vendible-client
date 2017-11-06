@@ -8,7 +8,8 @@ export default function (state = {}, action) {
           return {
             ...state,
             id: action.id,
-            email: action.email
+            email: action.email,
+            name: action.name
           }
         }
         default:
