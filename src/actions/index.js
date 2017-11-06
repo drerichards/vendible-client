@@ -1,10 +1,16 @@
 import axios from 'axios'
+import { FETCH_USER } from './types'
 import { FETCH_PRODUCTS } from './types'
 import { SHOW_MODAL } from './types'
 import { HIDE_MODAL } from './types'
 import { ADD_TO_CART } from './types'
 import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
+
+export const fetchUser = () => async dispatch => {
+    const res = await axios.get('https://stormy-fortress-32507.herokuapp.com/api/current_user')
+    dispatch({ type: FETCH_USER, payload: res.data })
+}
 
 export const fetchProducts = (dept) => async dispatch => {
     const route = `https://stormy-fortress-32507.herokuapp.com/inventory/${dept.toLowerCase()}`
@@ -13,17 +19,19 @@ export const fetchProducts = (dept) => async dispatch => {
 }
 
 export const showModal = (displayInfo) => {
-        const displayArr = [
-            displayInfo[0].currentSrc,
-            displayInfo[1].innerHTML,
-            displayInfo[2].innerText,
-            displayInfo[3].innerHTML
-        ]
-        return { type: SHOW_MODAL, payload: displayArr }
+    const displayArr = [
+        displayInfo[0].currentSrc,
+        displayInfo[1].innerHTML,
+        displayInfo[2].innerText,
+        displayInfo[3].innerHTML
+    ]
+    return { type: SHOW_MODAL, payload: displayArr }
 }
 
 export const fetchUserSuccess = (id, email) => ({
-  type: 'FETCH_USER_SUCCESS', id, email
+    type: 'FETCH_USER_SUCCESS',
+    id,
+    email
 })
 
 export const hideModal = () => {
