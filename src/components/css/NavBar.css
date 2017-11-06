@@ -25,11 +25,11 @@
     color: #C2E812;
 }
 
-.shopcart{
+.shopcart {
     display: inline-block;
 }
 
-.right{
+.right {
     width: 45%;
     text-align: right;
 }
@@ -38,8 +38,8 @@ input {
     display: inline;
 }
 
-.userName{
+.userEmail {
     margin: 0 5%;
     display: inline-block;
-    color: #fff;
+    color: rgb(16, 209, 9);
 }
