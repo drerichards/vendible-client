@@ -9,7 +9,7 @@ class NavBar extends Component {
 
     onLogout() {
     //   localStorage.clear()
-      localStorage.setItem('userEmail', 'pp')
+      localStorage.setItem('userEmail', undefined)
       window.location = '/'
     }
 
