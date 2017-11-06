@@ -1,4 +1,4 @@
-export const FETCH_USER_SUCCESS = 'fetch_user_success'
+// export const FETCH_USER_SUCCESS = 'fetch_user_success'
 export const FETCH_PRODUCTS = 'fetch_products'
 export const SHOW_MODAL = 'show_modal'
 export const HIDE_MODAL = 'hide_modal'
