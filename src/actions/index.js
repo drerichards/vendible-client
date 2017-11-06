@@ -8,7 +8,7 @@ import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
 
 export const fetchUser = () => async dispatch => {
-    const res = await axios.get('https://infinite-dusk-81657.herokuapp.com/api/current_user')
+    const res = await axios.get('https://stormy-fortress-32507.herokuapp.com/api/current_user')
     dispatch({ type: FETCH_USER, payload: res.data })
 }
 
@@ -19,20 +19,19 @@ export const fetchProducts = (dept) => async dispatch => {
 }
 
 export const showModal = (displayInfo) => {
-    const displayArr = [
-        displayInfo[0].currentSrc,
-        displayInfo[1].innerHTML,
-        displayInfo[2].innerText,
-        displayInfo[3].innerHTML
-    ]
-    return { type: SHOW_MODAL, payload: displayArr }
+        const displayArr = [
+            displayInfo[0].currentSrc,
+            displayInfo[1].innerHTML,
+            displayInfo[2].innerText,
+            displayInfo[3].innerHTML
+        ]
+        return { type: SHOW_MODAL, payload: displayArr }
 }
 
-export const fetchUserSuccess = (id, email, name) => ({
-    type: 'FETCH_USER_SUCCESS',
-    id,
-    email,
-    name
+export const fetchUserSuccess = (id, email) => ({
+  type: 'FETCH_USER_SUCCESS',
+  id,
+  email
 })
 
 export const hideModal = () => {

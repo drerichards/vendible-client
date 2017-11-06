@@ -6,10 +6,10 @@ import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
+
     onLogout() {
       localStorage.removeItem('userId')
       localStorage.removeItem('userEmail')
-      localStorage.removeItem('userName')
       window.location = '/'
     }
 
@@ -21,7 +21,7 @@ class NavBar extends Component {
                 return <div onClick={() => this.props.dispatch(hideModal())}>
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
-                    <p className='userName'>Hello {this.props.auth.name}!</p>
+                    <p className='userName'>Hello {this.props.auth.first_name}!</p>
                     <button type='button' className='btn btn-secondary' onClick={() => this.onLogout()}>
                         <a>Logout</a></button>
                 </div>
