@@ -14,7 +14,7 @@ class NavBar extends Component {
     }
 
     renderContent() {
-        console.log(this.props.auth.name)
+        console.log(this.props.auth)
         switch (!this.props.auth.id) {
             case null:
                 return
