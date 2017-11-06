@@ -19,8 +19,6 @@ class App extends Component {
       if(userId && userEmail) {
           this.props.dispatch(actions.fetchUserSuccess(userId, userEmail, userName))
       }
-    //   window.location = '/'
-
     }
     render() {
         return (
