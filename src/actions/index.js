@@ -7,7 +7,7 @@ import { REMOVE_FROM_CART } from './types'
 import { EMPTY_CART } from './types'
 
 export const fetchProducts = (dept) => async dispatch => {
-    const route = `https://stormy-fortress-32507.herokuapp.com/auth/google/inventory/${dept.toLowerCase()}`
+    const route = `https://stormy-fortress-32507.herokuapp.com/inventory/${dept.toLowerCase()}`
     const res = await axios.get(route)
     dispatch({ type: FETCH_PRODUCTS, payload: res.data })
 }
