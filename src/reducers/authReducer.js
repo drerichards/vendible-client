@@ -5,11 +5,11 @@ export default function (state = {}, action) {
         case FETCH_USER:
             return state = action.payload
         case 'FETCH_USER_SUCCESS': {
-            return {
-                ...state,
-                id: action.id,
-                email: action.email
-            }
+          return {
+            ...state,
+            id: action.id,
+            email: action.email
+          }
         }
         default:
             return state

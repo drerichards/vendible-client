@@ -19,19 +19,17 @@ export const fetchProducts = (dept) => async dispatch => {
 }
 
 export const showModal = (displayInfo) => {
-    const displayArr = [
-        displayInfo[0].currentSrc,
-        displayInfo[1].innerHTML,
-        displayInfo[2].innerText,
-        displayInfo[3].innerHTML
-    ]
-    return { type: SHOW_MODAL, payload: displayArr }
+        const displayArr = [
+            displayInfo[0].currentSrc,
+            displayInfo[1].innerHTML,
+            displayInfo[2].innerText,
+            displayInfo[3].innerHTML
+        ]
+        return { type: SHOW_MODAL, payload: displayArr }
 }
 
 export const fetchUserSuccess = (id, email) => ({
-    type: 'FETCH_USER_SUCCESS',
-    id,
-    email
+  type: 'FETCH_USER_SUCCESS', id, email
 })
 
 export const hideModal = () => {
