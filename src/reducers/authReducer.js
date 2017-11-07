@@ -14,8 +14,8 @@ export default function (state = {}, action) {
         case ON_LOGOUT:
             // localStorage.clear()
             // window.location = '/'
-            console.log(000)
-            alert(000)
+            console.log('000')
+            alert('000')
             return state
         default:
             return state
