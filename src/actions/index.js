@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { FETCH_USER } from './types'
 import { FETCH_PRODUCTS } from './types'
 import { SHOW_MODAL } from './types'
 import { HIDE_MODAL } from './types'
