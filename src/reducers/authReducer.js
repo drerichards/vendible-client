@@ -11,9 +11,9 @@ export default function (state = {}, action) {
         }
         case ON_LOGOUT:
             localStorage.clear()
-            localStorage.removeItem('userID')
-            localStorage.removeItem('userEmail')
-            // window.location = '/'
+            localStorage.setItem('userID', null)
+            localStorage.setItem('userEmail', null)
+            window.location = '/'
 
             console.log(state)
             console.log(localStorage)
