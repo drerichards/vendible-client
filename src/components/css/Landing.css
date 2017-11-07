@@ -19,19 +19,16 @@
     margin: 1% 0;
 }
 
-.addlCaption {
-    display: none;
+.carousel-inner {
+    height: 18em;
 }
 
-@media screen and (min-device-width: 300px) and (max-device-width: 740x) and (orientation: portrait) {
-    .carousel-inner {
-        height: 18em;
-    }
-    .addlCaption {
-        display: inline-block;
-        width: 100%;
-    }
+.addlCaption {
+    display: inline-block;
+    width: 100%;
 }
+
+
 
 @media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
     .carousel-inner {
@@ -41,5 +38,11 @@
         display: inline-block;
         width: 100%;
         position: absolute;
+    }
+}
+
+@media screen and (min-device-width: 768px) {
+    .addlCaption {
+        display: none;
     }
 }
