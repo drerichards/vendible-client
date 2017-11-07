@@ -12,13 +12,10 @@
 
     .deptContainer li {
         background-color: #96897B;
-        padding: 2%;
         width: 70%;
-        font-size: 1em;
         color: #fff;
         cursor: pointer;
         text-shadow: 1px 1px 2px #616161;
-        margin: 2%;
         display: inline-block;
     }
 
@@ -52,6 +49,10 @@
         transform: scale(1.025);
     }
 
+    .card-title {
+        font-size: 1.35em;
+    }
+
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -64,30 +65,25 @@
     }
 
     @media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
- 
+        .deptContainer ul a {
+            flex-direction: row;
+            margin: 2%;
+        }
     }
 
     @media only screen and (min-device-width: 768px) {
         .deptContainer {
-            margin: 3% auto;
             width: 70%;
-            text-align: center;
-        }
-        .deptContainer ul a {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
         }
         .deptContainer li {
-            background-color: #96897B;
             padding: 2%;
             width: 40%;
             font-size: 1.25em;
             margin: 4%;
-            color: #fff;
             cursor: pointer;
-            text-shadow: 1px 1px 2px #616161;
             margin: 2%;
-            display: inline-block;
+        }
+        .card-title {
+            font-size: 2em;
         }
     }

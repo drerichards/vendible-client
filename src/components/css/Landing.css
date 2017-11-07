@@ -28,8 +28,8 @@
 .mobileCaption h3,
 .carousel-caption h3 {
     font-size: 1.75em;
-    text-shadow: 3px 1px 4px #333;
-    color: rgb(165, 194, 21);
+    text-shadow: 1px 1px 1px #333;
+    color: #bfe500;
     margin: 1% 0;
 }
 
