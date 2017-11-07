@@ -2,7 +2,9 @@
     max-width: 100%;
     padding: 0;
 }
-
+.landing{
+    position: relative;
+}
 .carousel-caption {
     padding-bottom: 135px;
     width: 100%;
@@ -10,11 +12,13 @@
     left: 0;
 }
 
-.mobileCaption{
+.mobileCaption {
     width: 100%;
 }
+
 .mobileCaption h1,
 .carousel-caption h1 {
+    color: #fff;
     font-size: 2.5em;
     padding: 1.5%;
     text-shadow: 1px 1px 5px #333;
@@ -25,7 +29,7 @@
 .carousel-caption h3 {
     font-size: 1.75em;
     text-shadow: 3px 1px 4px #333;
-    color: rgb(213, 255, 19);
+    color: rgb(165, 194, 21);
     margin: 1% 0;
 }
 
@@ -36,6 +40,7 @@
 .addlCaption {
     display: inline-block;
     width: 100%;
+    text-align: center;
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
@@ -47,6 +52,9 @@
         top: 25%;
         width: 100%;
         position: absolute;
+    }
+    .mobileCaption h3{
+        color: rgb(213, 255, 19);
     }
 }
 
