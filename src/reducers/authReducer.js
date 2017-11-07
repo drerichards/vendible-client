@@ -11,13 +11,7 @@ export default function (state = {}, action) {
         }
         case ON_LOGOUT:
             window.localStorage.clear()
-            // localStorage.setItem('userID', null)
-            // localStorage.setItem('userEmail', null)
             window.location = '/'
-
-            console.log(state)
-            console.log(localStorage)
-            // alert('000')
             return state = {}
         default:
             return state

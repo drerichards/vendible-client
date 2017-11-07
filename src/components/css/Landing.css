@@ -4,7 +4,8 @@
     right: 0;
     left: 0;
 }
-.carousel-caption h1{
+
+.carousel-caption h1 {
     font-size: 3.5em;
     padding-top: 1.5%;
     text-shadow: 3px 1px 7px #000000;
@@ -16,4 +17,16 @@
     text-shadow: 2px 2px 4px #000000;
     color: rgb(213, 255, 19);
     margin: 1% 0;
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 740x) and (orientation: portrait) {
+    .carousel-inner {
+        height: 18em;
+    }
+}
+
+@media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
+    .carousel-inner {
+        height: 20em;
+    }
 }

@@ -55,7 +55,6 @@ class NavBar extends Component {
                             <li className='nav-item'><a className='nav-link' href='/'>Contact</a></li>
                         </ul>
                         <div className='right'>{this.renderContent()}</div>
-                        <Modal />
                     </div>
                 </nav>
             </div>
