@@ -11,6 +11,12 @@ export default function (state = {}, action) {
             email: action.email
           }
         }
+        case ON_LOGOUT:
+            // localStorage.clear()
+            // window.location = '/'
+            console.log(000)
+            alert(000)
+            return state
         default:
             return state
     }

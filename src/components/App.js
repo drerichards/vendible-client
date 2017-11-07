@@ -19,6 +19,10 @@ class App extends Component {
         this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
       }
     }
+    // onLogout() {
+    //     localStorage.clear()
+    //     window.location = '/'
+    // }
     render() {
         return (
             <div>

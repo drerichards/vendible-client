@@ -1,18 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { hideModal } from '../actions/index'
+import { hideModal, onLogout } from '../actions/index'
 import Modal from './Modal'
 import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
 class NavBar extends Component {
-
-    onLogout() {
-    //   localStorage.clear()
-      localStorage.setItem('userEmail', undefined)
-      window.location = '/'
-    }
-
     renderContent() {
         switch (!this.props.auth.id) {
             case null:
@@ -22,7 +15,7 @@ class NavBar extends Component {
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Signed in as: {this.props.auth.email}</p>
-                    <button type='button' className='btn btn-secondary' onClick={() => this.onLogout()}>
+                    <button type='button' className='btn btn-secondary' onClick={() => this.props.dispatch(onLogout())}>
                         <a>Logout</a></button>
                 </div>
             default:
