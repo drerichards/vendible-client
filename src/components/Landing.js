@@ -86,7 +86,7 @@ class Landing extends Component {
                 </header>
             </main>
             <section className="addlCaption">
-                <div className="mobileCaption carousel-caption">
+                <div className="mobileCaption">
                     <h1>Whatever you’ve got in mind</h1>
                     <h3>We’ve got inside!</h3>
                     <button type="button" className="btn btn-primary">
