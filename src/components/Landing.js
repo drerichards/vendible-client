@@ -7,7 +7,6 @@ import { fetchUserSuccess } from '../actions/index'
 import { connect } from 'react-redux'
 
 class Landing extends Component {
-
   componentDidMount() {
     if(this.props.match.params.userId) {
       localStorage.setItem('userId', this.props.match.params.userId)
