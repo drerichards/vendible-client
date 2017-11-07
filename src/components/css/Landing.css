@@ -19,14 +19,27 @@
     margin: 1% 0;
 }
 
+.addlCaption {
+    display: none;
+}
+
 @media screen and (min-device-width: 300px) and (max-device-width: 740x) and (orientation: portrait) {
     .carousel-inner {
         height: 18em;
+    }
+    .addlCaption {
+        display: inline-block;
+        width: 100%;
     }
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
     .carousel-inner {
         height: 20em;
+    }
+    .addlCaption {
+        display: inline-block;
+        width: 100%;
+        position: absolute;
     }
 }
