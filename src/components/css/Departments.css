@@ -69,6 +69,10 @@
             flex-direction: row;
             margin: 2%;
         }
+        .cardImg {
+            width: 60%;
+            margin: 5% auto;
+        }
     }
 
     @media only screen and (min-device-width: 768px) {
