@@ -84,7 +84,7 @@
         height: 11em;
     }
     .cartContainer ul li {
-        height: 7%;
+        height: 77%;
     }
     .cartPic {
         width: 13%;
@@ -134,15 +134,12 @@
         clear: both;
     }
     .cartPic {
-        width: 10%;
+        width: 14%;
         float: left;
     }
     .cartContainer ul li h6 {
         line-height: 1%;
         margin: 2% 0;
-    }
-    .cartContainer ul li p {
-        margin: 0;
     }
     .cartContainer button {
         float: left;
@@ -163,6 +160,6 @@
     }
     .removeItem img {
         float: none;
-        width: 15%;
+        width: 20%;
     }
 }

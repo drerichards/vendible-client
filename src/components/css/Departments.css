@@ -1,4 +1,4 @@
-    .deptContainer {
+            .deptContainer {
         margin: 3% auto;
         width: 100%;
         text-align: center;
@@ -79,15 +79,29 @@
         .deptContainer {
             width: 70%;
         }
+        .deptContainer ul a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .deptContainer li {
             padding: 2%;
             width: 40%;
-            font-size: 1.25em;
-            margin: 4%;
+            font-size: 1em;
             cursor: pointer;
             margin: 2%;
         }
         .card-title {
             font-size: 2em;
+        }
+        .cardImg {
+            width: 55%;
+            margin: 10% auto;
+        }
+    }
+
+    @media only screen and (min-device-width: 1000px) {
+        .deptContainer ul a{
+            flex-direction: row;
         }
     }

@@ -95,5 +95,6 @@ ul li {
 @media screen and (min-device-width: 768px) {
   body{
     height: 100vh;
+    min-width: 900px;
   }
 }
