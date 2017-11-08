@@ -17,14 +17,14 @@
 .cartContainer ul {
     padding: 0 1% 0 0;
     overflow: auto;
-    height: 35em;
+    height: 30em;
 }
 
 .cartContainer ul li {
     width: 100%;
     border-top: 1px solid;
     padding: 2% 0;
-    height: 22%;
+    height: 25%;
 }
 
 .cartContainer ul li div {
@@ -44,6 +44,7 @@
 
 .cartContainer ul li p {
     margin: 0;
+    font-weight: 300;
 }
 
 .cartContainer button {
@@ -60,7 +61,7 @@
 .removeItem {
     float: right;
     width: 21%;
-    margin: 4% 0 1%;
+    margin: 1% 0;
 }
 
 .removeItem:hover {
@@ -70,6 +71,12 @@
 .removeItem img {
     float: none;
     width: 35%;
+    margin-left: -15%;
+}
+
+.removeItem p {
+    display: inline-block;
+    margin-left: 5%;
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {}
