@@ -45,7 +45,7 @@
         color: #fff;
     }
 
-    @media screen and (min-device-width: 1000px) {
+    @media screen and (min-device-width: 990px) {
         .right {
             width: 45%;
             text-align: right;
