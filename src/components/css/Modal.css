@@ -73,6 +73,10 @@
             height: 100%;
         }
 
+        .modalProduct h3 {
+            font-size: 1.3em;
+        }
+
         .modalImg {
             width: 70%;
             height: 100%;
@@ -114,6 +118,9 @@
                 margin: 8% 0;
                 height: 90%;
                 padding: 0;
+            }
+            .modalProduct h3 {
+                font-size: 1.75em;
             }
             .modalImg {
                 width: 50%;
