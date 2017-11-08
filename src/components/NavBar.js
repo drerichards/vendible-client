@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { hideModal, onLogout } from '../actions/index'
-import Modal from './Modal'
 import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 

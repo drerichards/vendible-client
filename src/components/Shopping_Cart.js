@@ -19,7 +19,7 @@ class ShoppingCart extends Component {
             <h6><strong>{item[1]}</strong></h6>
             <p>${item[2].substr(1)}</p>
             <span className='removeItem'>
-                <button className='btn btn-warning' onClick={() => this.clickRemove(index)}><img src={icon} alt='Remove Item' /> Remove</button></span>
+                <button className='btn btn-warning' onClick={() => this.clickRemove(index)}><img src={icon} alt='Remove Item' /><p>Remove</p></button></span>
         </li>)
         let items = []
         for (let i = 0; i < cartItems.length; i++) {
