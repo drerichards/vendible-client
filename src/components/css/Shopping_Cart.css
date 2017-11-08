@@ -84,10 +84,10 @@
         height: 11em;
     }
     .cartContainer ul li {
-        height: 75%;
+        height: 7%;
     }
     .cartPic {
-        width: 14%;
+        width: 13%;
     }
     .removeItem {
         width: 16%;
@@ -98,8 +98,8 @@
     .removeItem img {
         margin-left: -5%;
     }
-    .removeItem p {
-        margin: 0 5%;
+    .cartContainer ul li p {
+        margin: 0 0 0 5%;
     }
 }
 
