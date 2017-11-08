@@ -29,7 +29,7 @@ class ShoppingCart extends Component {
         }
 
         return (
-            <div className='container bodyContainer cartContainer'>
+            <div className='container cartContainer'>
                 <h1>Shopping Cart: {cartItems.length} item(s)</h1>
                 <ul>
                     {cartDisplay}
