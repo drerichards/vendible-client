@@ -36,7 +36,7 @@ class ShoppingCart extends Component {
                 </ul>
                 <div>
                     <Payment total={total} />
-                    <h5>Subtotal:${total}</h5>
+                    <h5>Subtotal: ${total}</h5>
                 </div>
             </div>
         )

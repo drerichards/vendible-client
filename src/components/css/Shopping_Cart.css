@@ -79,7 +79,29 @@
     margin-left: 5%;
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {}
+@media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
+    .cartContainer ul {
+        height: 11em;
+    }
+    .cartContainer ul li {
+        height: 75%;
+    }
+    .cartPic {
+        width: 14%;
+    }
+    .removeItem {
+        width: 16%;
+    }
+    .cartContainer button {
+        font-size: 15px;
+    }
+    .removeItem img {
+        margin-left: -5%;
+    }
+    .removeItem p {
+        margin: 0 5%;
+    }
+}
 
 @media screen and (min-device-width: 768px) {
     .cartContainer {
