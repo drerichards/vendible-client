@@ -30,8 +30,9 @@
     }
 
     .right {
-        width: 45%;
-        text-align: right;
+        width: 90%;
+        float: right;
+        text-align: left;
     }
 
     input {
@@ -44,13 +45,12 @@
         color: #fff;
     }
 
-    @media screen and (min-device-width: 60px) and (max-device-width: 1000px) {
+    @media screen and (min-device-width: 1000px) {
         .right {
-            width: 90%;
-            float: right;
-            text-align: left;
+            width: 45%;
+            text-align: right;
         }
-        .userName{
+        .userName {
             margin: 3% 0;
             display: block;
         }
