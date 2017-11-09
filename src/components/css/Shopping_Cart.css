@@ -134,8 +134,11 @@
         clear: both;
     }
     .cartPic {
-        width: 14%;
+        width: 10%;
         float: left;
+    }
+    .cartContainer ul li p {
+        margin: 0 0 0 5%;
     }
     .cartContainer ul li h6 {
         line-height: 1%;
