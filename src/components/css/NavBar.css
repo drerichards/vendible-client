@@ -40,9 +40,9 @@
     }
 
     .userName {
-        margin: 0 5%;
-        display: inline-block;
         color: #fff;
+        margin: 3% 0;
+        display: block;
     }
 
     @media screen and (min-device-width: 990px) {
@@ -50,8 +50,8 @@
             width: 45%;
             text-align: right;
         }
-       .right .userName {
-            margin: 3% 0;
-            display: block;
+        .right .userName {
+            margin: 0 5%;
+            display: inline-block;
         }
     }

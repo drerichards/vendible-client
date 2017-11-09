@@ -147,7 +147,7 @@
     .cartContainer button {
         float: left;
         clear: both;
-        font-size: 12px;
+        font-size: 14px;
     }
     .cartContainer div {
         border-top: 3px solid;
@@ -155,7 +155,7 @@
     }
     .removeItem {
         float: right;
-        width: 15%;
+        width: 10%;
         margin: 4% 0 1%;
     }
     .removeItem:hover {
