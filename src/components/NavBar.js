@@ -15,7 +15,7 @@ class NavBar extends Component {
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Signed in as: {this.props.auth.email}</p>
                     <button type='button' className='btn btn-secondary' onClick={() => this.props.dispatch(onLogout())}>
-                        <a>Logout</a></button>
+                       Logout</button>
                 </div>
             default:
                 return <div>
