@@ -19,8 +19,9 @@ class NavBar extends Component {
                 </div>
             default:
                 return <div>
+                    <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>
                     <button type='button' className='btn btn-primary'>
-                        <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>Google Sign In</a></button>
+                        Google Sign In</button></a>
                 </div>
         }
     }

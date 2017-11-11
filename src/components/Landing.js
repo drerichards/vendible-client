@@ -89,9 +89,11 @@ class Landing extends Component {
                 <div className="mobileCaption">
                     <h1>Whatever you’ve got in mind</h1>
                     <h3>We’ve got inside!</h3>
+                    <a href="/departments">
                     <button type="button" className="btn btn-primary">
-                        <a href="/departments">Shop Now!</a>
+                        Shop Now!
                     </button>
+                    </a>
                 </div>
             </section>
 
