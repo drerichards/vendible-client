@@ -38,9 +38,9 @@
 }
 
 .cartContainer ul li h6 {
-    line-height: 1%;
-    margin: 2% 0;
-    height: 10%;
+    line-height: 100%;
+    margin: 0% 0 5%;
+    height: 9%;
 }
 
 .cartContainer ul li p {
@@ -144,6 +144,10 @@
     .cartContainer ul li h6 {
         line-height: 1%;
         margin: 2% 0;
+        height: 0;
+        line-height: 100%;
+        margin: 0% 0 5%;
+        height: 9%;
     }
     .cartContainer button {
         float: left;
