@@ -7,10 +7,9 @@ class Payment extends Component {
     render() {
         const cartTotal = this.props.total,
             payTotal = cartTotal * 100,
-            description = `Purchase Total: ${cartTotal}
-            Enter Credit Card: 4242 4242 4242 4242
-            3 Digit Code: 111
-            Expiration: 12/22`
+            description = `CC: 4242 4242 4242 4242
+            Exp: 12/22
+            CVC: 111`
         return (
             <StripeCheckout
                 name='Vendible'
