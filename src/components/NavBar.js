@@ -10,22 +10,22 @@ class NavBar extends Component {
             case null:
                 return
             case false:
-            const email = this.props.auth.email
-            email = email.replace('@gmail.com', '')
+                let email = this.props.auth.email.replace('@gmail.com', '')
+                console.log(email)
                 return <div onClick={() => this.props.dispatch(hideModal())}>
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
                     <p className='userName'>Signed in as: {email}</p>
                     <button type='button' className='btn btn-secondary' onClick={() => this.props.dispatch(onLogout())}>
-                       Logout</button>
+                        Logout</button>
                 </div>
             default:
                 return <div>
                     <p>Use Email: "vendible.login@gmail.com"</p>
                     <p>Password: "vendible"</p>
                     <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>
-                    <button type='button' className='btn btn-primary'>
-                        Google Sign In</button></a>
+                        <button type='button' className='btn btn-primary'>
+                            Google Sign In</button></a>
                 </div>
         }
     }
@@ -49,13 +49,14 @@ class NavBar extends Component {
                         aria-label='Toggle navigation'>
                         <span className='navbar-toggler-icon'></span>
                     </button>
-
-                    {!this.props.auth.id ? <div></div> : <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-                        <ul id='navlink' className='navbar-nav mr-auto' onClick={() => this.props.dispatch(hideModal())}>
-                            <li className='nav-item'><a className='nav-link' href='/departments'>Shop Departments</a></li>
-                        </ul>
-                    </div>}
-                    <div className='right'>{this.renderContent()}</div>                    
+                    <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+                        {!this.props.auth.id ? <div></div> :
+                            <ul id='navlink' className='navbar-nav mr-auto' onClick={() => this.props.dispatch(hideModal())}>
+                                <li className='nav-item'><a className='nav-link' href='/departments'>Shop Departments</a></li>
+                            </ul>
+                        }
+                        <div className='right'>{this.renderContent()}</div>
+                    </div>
                 </nav>
             </div>
         )
