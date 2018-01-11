@@ -16,10 +16,12 @@ class ShoppingCart extends Component {
         if (!total) { total = 0 }
         const cartDisplay = cartItems.map((item, index) => <li key={index}>
             <img className='cartPic' src={item[0]} alt={item[1]} />
-            <h6><strong>{item[1]}</strong></h6>
-            <h5>${item[2].substr(1)}</h5>
-            <span className='removeItem'>
-                <button className='btn btn-warning' onClick={() => this.clickRemove(index)}><img src={icon} alt='Remove Item' /><p>Remove</p></button></span>
+            <div>
+                <h6><strong>{item[1]}</strong></h6>
+                <h5>${item[2].substr(1)}</h5>
+                <span className='removeItem'>
+                    <button className='btn btn-warning' onClick={() => this.clickRemove(index)}><img src={icon} alt='Remove Item' /><p>Remove</p></button></span>
+            </div>
         </li>)
         let items = []
         for (let i = 0; i < cartItems.length; i++) {

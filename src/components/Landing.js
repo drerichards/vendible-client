@@ -24,7 +24,7 @@ class Landing extends Component {
     }
     renderMobileButton() {
         return !this.props.auth.id ? 
-            <div className='btn-primary'>Click the &#x2630; 	&#9776; to Sign In</div>
+            <div className='btn-primary'>Click the &#x2630; to Sign In</div>
             : <a href="/departments">
                 <button type="button" className="btn btn-primary">Shop Now!</button>
             </a>

@@ -11,7 +11,6 @@ class NavBar extends Component {
                 return
             case false:
                 let email = this.props.auth.email.replace('@gmail.com', '')
-                console.log(email)
                 return <div onClick={() => this.props.dispatch(hideModal())}>
                     <a className='shopcart' href='/shopping_cart'>
                         <img src={icon} alt='cart' /> {this.props.cart.length} item(s)</a>
