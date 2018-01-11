@@ -43,7 +43,6 @@
 
 .cartPic {
     width: 21%;
-    float: left;
 }
 
 .cartContainer ul li h5 {
@@ -123,7 +122,6 @@
 
 @media screen and (min-width: 768px) {
     .cartContainer {
-        /* min-width: 700px; */
         margin: 3% auto;
     }
     .cartContainer h1 {
@@ -150,6 +148,7 @@
     }
     .cartPic {
         width: 10%;
+        min-width: 125px;
     }
 
     .cartContainer ul li h6 {
