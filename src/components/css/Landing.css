@@ -45,7 +45,7 @@
     text-align: center;
 }
 
-@media screen and (min-device-width: 600px) and (max-device-width: 820px) and (orientation: landscape) {
+@media screen and (min-width: 600px) and (max-width: 820px) and (orientation: landscape) {
     .carousel-inner {
         height: 20em;
     }
@@ -60,7 +60,7 @@
     }
 }
 
-@media screen and (min-device-width: 768px) {
+@media screen and (min-width: 768px) {
     .container {
         max-width: 70%;
     }

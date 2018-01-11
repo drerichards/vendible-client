@@ -45,7 +45,7 @@
         display: block;
     }
 
-    @media screen and (min-device-width: 990px) {
+    @media screen and (min-width: 990px) {
         .right {
             width: 45%;
             text-align: right;

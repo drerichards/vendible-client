@@ -92,7 +92,7 @@ ul li {
     transition: opacity 250ms ease-in;
 }
 
-@media screen and (min-device-width: 768px) {
+@media screen and (min-width: 768px) {
   body{
     height: 100vh;
     min-width: 900px;
