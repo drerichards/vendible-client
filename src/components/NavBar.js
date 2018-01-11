@@ -50,8 +50,8 @@ class NavBar extends Component {
                         <ul id='navlink' className='navbar-nav mr-auto' onClick={() => this.props.dispatch(hideModal())}>
                             <li className='nav-item'><a className='nav-link' href='/departments'>Shop Departments</a></li>
                         </ul>
-                        <div className='right'>{this.renderContent()}</div>
                     </div>}
+                    <div className='right'>{this.renderContent()}</div>                    
                 </nav>
             </div>
         )

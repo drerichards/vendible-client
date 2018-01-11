@@ -16,6 +16,8 @@ class Landing extends Component {
     }
 
     render() {
+        console.log(this.state)
+
         return (
             <div className="landing">
                 <main role="main">
