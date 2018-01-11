@@ -15,9 +15,15 @@ class Landing extends Component {
         }
     }
 
+    renderButton() {
+        return !this.props.auth.id ? <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>
+            <button type='button' className='btn btn-primary'>Google Sign In</button></a>
+            : <a href="/departments">
+                <button type="button" className="btn btn-primary">Shop Now!</button>
+            </a>
+    }
+
     render() {
-        console.log(this.props)
-        console.log(this.props.auth.id)
         return (
             <div className="landing">
                 <main role="main">
@@ -41,10 +47,7 @@ class Landing extends Component {
                                         <div className="carousel-caption d-none d-md-block">
                                             <h1>All the best brands</h1>
                                             <h3>All in one place!</h3>
-                                            <a href="/departments">
-                                                <button type="button" className="btn btn-primary">
-                                                    Shop Now!
-                                            </button></a>
+                                            {this.renderButton()}
                                         </div>
                                     </div>
                                     <div className="carousel-item">
@@ -52,10 +55,7 @@ class Landing extends Component {
                                         <div className="carousel-caption d-none d-md-block">
                                             <h1>More stores. More value.</h1>
                                             <h3>More of what you want!</h3>
-                                            <a href="/departments">
-                                                <button type="button" className="btn btn-primary">
-                                                    Shop Now!
-                                            </button></a>
+                                            {this.renderButton()}
                                         </div>
                                     </div>
                                     <div className="carousel-item">
@@ -63,9 +63,7 @@ class Landing extends Component {
                                         <div className="carousel-caption d-none d-md-block">
                                             <h1>Whatever you’ve got in mind</h1>
                                             <h3>We’ve got inside!</h3>
-                                            <button type="button" className="btn btn-primary">
-                                                <a href="/departments">Shop Now!</a>
-                                            </button>
+                                            {this.renderButton()}
                                         </div>
                                     </div>
                                 </div>
@@ -93,14 +91,9 @@ class Landing extends Component {
                     <div className="mobileCaption">
                         <h1>Whatever you’ve got in mind</h1>
                         <h3>We’ve got inside!</h3>
-                        {!this.props.auth.id ? <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>
-                            <button type='button' className='btn btn-primary'>Google Sign In</button></a>
-                             : <a href="/departments">
-                            <button type="button" className="btn btn-primary">Shop Now!</button>
-                        </a>}
+                        {this.renderButton()}
                     </div>
                 </section>
-
             </div>
         )
     }
