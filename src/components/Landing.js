@@ -93,7 +93,7 @@ class Landing extends Component {
                     <div className="mobileCaption">
                         <h1>Whatever you’ve got in mind</h1>
                         <h3>We’ve got inside!</h3>
-                        {!this.props.auth ? '' : <a href="/departments">
+                        {!this.props.auth.id ? '' : <a href="/departments">
                             <button type="button" className="btn btn-primary">
                                 Shop Now!
                     </button>
@@ -107,4 +107,4 @@ class Landing extends Component {
 }
 
 const mapStateToProps = state => ({ auth: state.auth})
-export default connect()(Landing)
+export default connect(mapStateToProps)(Landing)
