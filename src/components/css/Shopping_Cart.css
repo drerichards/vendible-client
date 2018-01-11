@@ -25,8 +25,8 @@
     display: flex;
     justify-content: space-between;
     border-top: 1px solid;
-    padding: 2% 0;
-    height: 33%;
+    padding: 2%;
+    height: 25%;
 }
 
 .cartContainer ul li div {
@@ -71,7 +71,7 @@
 
 .removeItem {
     float: right;
-    width: 18%;
+    width: 5em;
     margin: 1% 0;
 }
 
@@ -81,7 +81,7 @@
 
 .removeItem img {
     float: none;
-    width: 18%;
+    width: 25%;
     margin: 0 5%;
 }
 
@@ -95,16 +95,16 @@
         height: 11em;
     }
     .cartContainer ul li {
-        height: 77%;
+        height: 80%;
     }
     .cartPic {
         width: 13%;
     }
     .removeItem {
-        width: 16%;
+        width: 6em;
     }
     .cartContainer button {
-        font-size: 15px;
+        font-size: 14px;
     }
     .removeItem img {
         margin-left: -5%;

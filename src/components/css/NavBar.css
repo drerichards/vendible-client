@@ -40,13 +40,13 @@
         text-align: left;
     }
 
-    .right p{
-        display: inline-block;
-        margin: 0.5% 1%;
+    .right * {
+        margin: 4.5% 1%;
+        display: block;
         color: #fff;
     }
 
-    .right a {
+    .right a:hover {
         color: #C2E812;
     }
 
@@ -62,11 +62,13 @@
 
     @media screen and (min-width: 990px) {
         .right {
-            /* width: 45%; */
             text-align: right;
+        }
+        .right * {
+            margin: 0.5% 1%;
+            display: inline-block;
         }
         .right .userName {
             margin: 0 5%;
-            display: inline-block;
         }
     }
