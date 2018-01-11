@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { hideModal, onLogout } from '../actions/index'
+import { hideModal, onLogout, showLinks, hideLinks } from '../actions/index'
 import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
@@ -25,6 +25,11 @@ class NavBar extends Component {
                 </div>
         }
     }
+    showShopLinks(e){
+        e.preventDefault()
+        this.setState({ showLinks: !this.state.showLinks })
+    }
+
     closeModal(e) {
         e.preventDefault()
         this.setState({ showModal: !this.state.showModal })
@@ -46,12 +51,12 @@ class NavBar extends Component {
                         <span className='navbar-toggler-icon'></span>
                     </button>
 
-                    <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+                    {!this.props.auth.id ? <div></div> : <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                         <ul id='navlink' className='navbar-nav mr-auto' onClick={() => this.props.dispatch(hideModal())}>
                             <li className='nav-item'><a className='nav-link' href='/departments'>Shop Departments</a></li>
                         </ul>
                         <div className='right'>{this.renderContent()}</div>
-                    </div>
+                    </div>}
                 </nav>
             </div>
         )

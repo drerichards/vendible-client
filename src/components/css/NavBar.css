@@ -8,8 +8,12 @@
         width: 100%;
     }
 
+    .navbar-nav {
+        width: 100%;
+    }
+
     .navigation li {
-        margin: 0 10%;
+        margin: 0 5%;
     }
 
     .navbar-brand {
@@ -34,6 +38,10 @@
         width: 90%;
         float: right;
         text-align: left;
+    }
+
+    .right a {
+        color: #C2E812;
     }
 
     input {
