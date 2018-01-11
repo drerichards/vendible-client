@@ -29,6 +29,13 @@
     height: 25%;
 }
 
+.cartContainer ul li span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .cartContainer ul li div {
     float: right;
     clear: both;
@@ -60,7 +67,7 @@
     font-size: 12px;
 }
 
-#root>div>div>div.container.cartContainer>div>span>button{
+#root>div>div>div.container.cartContainer>div>span>button {
     padding: 1% 5%;
 }
 
@@ -138,7 +145,7 @@
         width: 100%;
         border-top: 1px solid;
         padding: 2% 0;
-        height: 30%;
+        /* height: 30%; */
     }
     .cartContainer ul li div {
         float: right;

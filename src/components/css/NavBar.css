@@ -41,9 +41,13 @@
     }
 
     .right * {
-        margin: 4.5% 1%;
+        margin: 1%;
         display: block;
         color: #fff;
+    }
+
+    .right img {
+        display: inline-block;
     }
 
     .right a:hover {
