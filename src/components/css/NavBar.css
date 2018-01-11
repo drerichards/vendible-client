@@ -75,4 +75,7 @@
         .right .userName {
             margin: 0 5%;
         }
+        .shopcart{
+            width: 50%;
+        }
     }
