@@ -19,6 +19,8 @@ class NavBar extends Component {
                 </div>
             default:
                 return <div>
+                    <p>Use Email: "vendible.login@gmail.com"</p>
+                    <p>Password: "vendible"</p>
                     <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>
                     <button type='button' className='btn btn-primary'>
                         Google Sign In</button></a>

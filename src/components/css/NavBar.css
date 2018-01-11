@@ -56,7 +56,6 @@
 
     @media screen and (min-width: 990px) {
         .right {
-            width: 45%;
             text-align: right;
         }
         .right .userName {
