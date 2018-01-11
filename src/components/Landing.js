@@ -17,7 +17,7 @@ class Landing extends Component {
 
     render() {
         console.log(this.props)
-
+        console.log(this.props.auth.id)
         return (
             <div className="landing">
                 <main role="main">
