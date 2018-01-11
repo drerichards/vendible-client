@@ -1,6 +1,4 @@
 export const FETCH_PRODUCTS = 'fetch_products'
-export const SHOW_LINKS = 'show_links'
-export const HIDE_LINKS = 'hide_links'
 export const SHOW_MODAL = 'show_modal'
 export const HIDE_MODAL = 'hide_modal'
 export const ON_LOGOUT = 'on_logout'

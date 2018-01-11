@@ -1,7 +1,5 @@
 import axios from 'axios'
 import { FETCH_PRODUCTS } from './types'
-import { SHOW_LINKS } from './types'
-import { HIDE_LINKS } from './types'
 import { SHOW_MODAL } from './types'
 import { HIDE_MODAL } from './types'
 import { ON_LOGOUT } from './types'
@@ -28,14 +26,6 @@ export const showModal = (displayInfo) => {
 export const fetchUserSuccess = (id, email) => ({
   type: 'FETCH_USER_SUCCESS', id, email
 })
-
-export const hideLinks = () => {
-    return { type: HIDE_LINKS }
-}
-
-export const showLinks = () => {
-    return { type: SHOW_LINKS }
-}
 
 export const hideModal = () => {
     return { type: HIDE_MODAL }

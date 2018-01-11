@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { hideModal, onLogout, showLinks, hideLinks } from '../actions/index'
+import { hideModal, onLogout } from '../actions/index'
 import './css/NavBar.css'
 import icon from '../images/shopping-icon.png'
 
@@ -25,11 +25,6 @@ class NavBar extends Component {
                 </div>
         }
     }
-    showShopLinks(e){
-        e.preventDefault()
-        this.setState({ showLinks: !this.state.showLinks })
-    }
-
     closeModal(e) {
         e.preventDefault()
         this.setState({ showModal: !this.state.showModal })
