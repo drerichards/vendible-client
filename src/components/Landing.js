@@ -93,10 +93,10 @@ class Landing extends Component {
                     <div className="mobileCaption">
                         <h1>Whatever you’ve got in mind</h1>
                         <h3>We’ve got inside!</h3>
-                        {this.props.auth.id ? '' : <a href="/departments">
-                            <button type="button" className="btn btn-primary">
-                                Shop Now!
-                    </button>
+                        {!this.props.auth.id ? <a href='https://stormy-fortress-32507.herokuapp.com/auth/google'>
+                            <button type='button' className='btn btn-primary'>Google Sign In</button></a>
+                             : <a href="/departments">
+                            <button type="button" className="btn btn-primary">Shop Now!</button>
                         </a>}
                     </div>
                 </section>
@@ -106,5 +106,5 @@ class Landing extends Component {
     }
 }
 
-const mapStateToProps = state => ({ auth: state.auth})
+const mapStateToProps = state => ({ auth: state.auth })
 export default connect(mapStateToProps)(Landing)
