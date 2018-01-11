@@ -22,7 +22,13 @@ class Landing extends Component {
                 <button type="button" className="btn btn-primary">Shop Now!</button>
             </a>
     }
-
+    renderMobileButton() {
+        return !this.props.auth.id ? 
+            <div className='btn-primary'>Click the &#x2630; 	&#9776; to Sign In</div>
+            : <a href="/departments">
+                <button type="button" className="btn btn-primary">Shop Now!</button>
+            </a>
+    }
     render() {
         return (
             <div className="landing">
@@ -91,7 +97,7 @@ class Landing extends Component {
                     <div className="mobileCaption">
                         <h1>Whatever you’ve got in mind</h1>
                         <h3>We’ve got inside!</h3>
-                        {this.renderButton()}
+                        {this.renderMobileButton()}
                     </div>
                 </section>
             </div>
