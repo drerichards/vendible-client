@@ -40,6 +40,12 @@
         text-align: left;
     }
 
+    .right p{
+        display: inline-block;
+        margin: 0.5% 1%;
+        color: #fff;
+    }
+
     .right a {
         color: #C2E812;
     }
