@@ -25,7 +25,6 @@ export const showModal = (displayInfo) => {
 }
 
 export const fetchUserSuccess = (id, email) => {
-    localStorage.removeItem('state')
   return {type: FETCH_USER_SUCCESS, id, email}
 }
 
@@ -38,15 +37,15 @@ export const onLogout = () => {
     return { type: ON_LOGOUT }
 }
 
-export const addToCart = (item) => {
+export const addToCart = item => {
     return { type: ADD_TO_CART, payload: item }
 }
 
-export const removeFromCart = (index) => {
+export const removeFromCart = index => {
     return { type: REMOVE_FROM_CART, payload: index }
 }
 
-export const handleToken = (cartTotal) => {
+export const handleToken = cartTotal => {
     alert(`Thank You for your Purchase of ${cartTotal}!`)
     return { type: EMPTY_CART }
 }

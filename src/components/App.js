@@ -12,6 +12,7 @@ import ShoppingCart from './Shopping_Cart'
 class App extends Component {
 
     componentDidMount() {
+        localStorage.clear()
 
         //   const userId = localStorage.getItem('userId')
         //   const userEmail = localStorage.getItem('userEmail')
