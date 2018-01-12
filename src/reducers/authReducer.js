@@ -10,11 +10,14 @@ export default function (state = {}, action) {
           }
         }
         case ON_LOGOUT:
-            console.log('hello world')
+            console.log('hello world1')
             window.localStorage.clear()
+            console.log('hello world2')
 
             localStorage.removeItem('state')
+            console.log('hello world3')
             localStorage.removeItem('userEmail')
+            console.log('hello world4')
             localStorage.removeItem('userId')
             // window.location = '/'
             return state = {}
