@@ -11,14 +11,16 @@ import ShoppingCart from './Shopping_Cart'
 
 class App extends Component {
 
-    // componentDidMount() {
-    //   const userId = localStorage.getItem('userId')
+    componentDidMount() {
+     localStorage.removeItem('userEmail')
+            localStorage.removeItem('userId')
+        //   const userId = localStorage.getItem('userId')
     //   const userEmail = localStorage.getItem('userEmail')
 
     //   if(userId && userEmail) {
     //     this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
     //   }
-    // }
+    }
 
     render() {
         return (
