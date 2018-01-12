@@ -15,9 +15,9 @@ class App extends Component {
       const userId = localStorage.getItem('userId')
       const userEmail = localStorage.getItem('userEmail')
 
-      if(userId && userEmail) {
-        this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
-      }
+    //   if(userId && userEmail) {
+    //     this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
+    //   }
     }
 
     render() {

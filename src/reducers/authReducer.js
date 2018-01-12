@@ -10,8 +10,8 @@ export default function (state = {}, action) {
           }
         }
         case ON_LOGOUT:
-            // window.localStorage.clear()
             console.log('hello world')
+            window.localStorage.clear()
 
             localStorage.removeItem('state')
             localStorage.removeItem('userEmail')

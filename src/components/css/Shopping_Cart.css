@@ -43,6 +43,7 @@
 
 .cartPic {
     width: 21%;
+    height: 100%;
 }
 
 .cartContainer ul li h5 {
@@ -76,7 +77,6 @@
 }
 
 .removeItem {
-    /* float: right; */
     width: 5em;
     margin: 1% 0;
 }
@@ -134,13 +134,13 @@
     .cartContainer ul {
         padding: 0 1% 0 0;
         overflow: auto;
-        height: 35em;
     }
     .cartContainer ul li {
         width: 100%;
         border-top: 1px solid;
         padding: 1%;
         height: 30%;
+        min-height: 150px;
     }
     .cartContainer ul li div {
         float: right;
