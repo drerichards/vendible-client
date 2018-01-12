@@ -32,6 +32,7 @@ export const hideModal = () => {
 }
 
 export const onLogout = () => {
+    console.log('hello')
     return { type: ON_LOGOUT }
 }
 
