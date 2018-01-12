@@ -16,9 +16,7 @@ class App extends Component {
         //   const userId = localStorage.getItem('userId')
         //   const userEmail = localStorage.getItem('userEmail')
 
-          if(!userId && !userEmail) {
-              localStorage.clear()
-        }
+  
     }
 
     render() {

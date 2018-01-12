@@ -12,7 +12,7 @@ class Landing extends Component {
             localStorage.setItem('userId', this.props.match.params.userId)
             localStorage.setItem('userEmail', this.props.match.params.userEmail)
             this.props.dispatch(fetchUserSuccess(this.props.match.params.userId, this.props.match.params.userEmail))
-        }
+        } else localStorage.clear()
     }
 
     renderButton() {
@@ -23,7 +23,7 @@ class Landing extends Component {
             </a>
     }
     renderMobileButton() {
-        return !this.props.auth.id ? 
+        return !this.props.auth.id ?
             <div className='btn-primary'>Click the &#x2630; to Sign In</div>
             : <a href="/departments">
                 <button type="button" className="btn btn-primary">Shop Now!</button>
