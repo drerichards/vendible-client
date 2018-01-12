@@ -15,7 +15,8 @@ export default function (state = {}, action) {
             localStorage.removeItem('userEmail')
             localStorage.removeItem('userId')
             window.location = '/'
-            return state
+            const newState = Object.assign({}, state, {})
+            return newState
         default:
             return state
     }
