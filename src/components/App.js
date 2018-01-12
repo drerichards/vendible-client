@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import * as actions from '../actions'
 
 import NavBar from './NavBar'
@@ -12,14 +12,16 @@ import ShoppingCart from './Shopping_Cart'
 class App extends Component {
 
     componentDidMount() {
-     localStorage.removeItem('userEmail')
-            localStorage.removeItem('userId')
-        //   const userId = localStorage.getItem('userId')
-    //   const userEmail = localStorage.getItem('userEmail')
+        localStorage.removeItem('userEmail')            
+        localStorage.removeItem('state')
 
-    //   if(userId && userEmail) {
-    //     this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
-    //   }
+        localStorage.removeItem('userId')
+        //   const userId = localStorage.getItem('userId')
+        //   const userEmail = localStorage.getItem('userEmail')
+
+        //   if(userId && userEmail) {
+        //     this.props.dispatch(actions.fetchUserSuccess(userId, userEmail))
+        //   }
     }
 
     render() {
@@ -27,12 +29,12 @@ class App extends Component {
             <div>
                 <Router>
                     <div>
-                        <NavBar/>
-                        <Route exact path='/' component={Landing}/>
-                        <Route path='/:userId/:userEmail' component={Landing}/>
-                        <Route path='/departments' component={Departments}/>
-                        <Route path='/product_display' component={ProductDisplay}/>
-                        <Route path='/shopping_cart' component={ShoppingCart}/>
+                        <NavBar />
+                        <Route exact path='/' component={Landing} />
+                        <Route path='/:userId/:userEmail' component={Landing} />
+                        <Route path='/departments' component={Departments} />
+                        <Route path='/product_display' component={ProductDisplay} />
+                        <Route path='/shopping_cart' component={ShoppingCart} />
                     </div>
                 </Router>
             </div>
