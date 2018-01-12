@@ -11,6 +11,9 @@ export default function (state = {}, action) {
         }
         case ON_LOGOUT:
             localStorage.clear()
+            localStorage.removeItem('state')
+            localStorage.removeItem('userEmail')
+            localStorage.removeItem('userId')
             window.location = '/'
             return state
         default:
