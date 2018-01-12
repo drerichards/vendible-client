@@ -51,7 +51,7 @@ class NavBar extends Component {
                     <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                         {!this.props.auth.id ? <div></div> :
                             <ul id='navlink' className='navbar-nav mr-auto' onClick={() => this.props.dispatch(hideModal())}>
-                                <li className='nav-item'><a className='nav-link' href='/departments'>Shop Departments</a></li>
+                                <li className='nav-item'><a className='nav-link' href="/departments">Shop Departments</a></li>
                             </ul>
                         }
                         <div className='right'>{this.renderContent()}</div>

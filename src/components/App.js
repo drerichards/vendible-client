@@ -12,10 +12,7 @@ import ShoppingCart from './Shopping_Cart'
 class App extends Component {
 
     componentDidMount() {
-        localStorage.removeItem('userEmail')            
-        localStorage.removeItem('state')
 
-        localStorage.removeItem('userId')
         //   const userId = localStorage.getItem('userId')
         //   const userEmail = localStorage.getItem('userEmail')
 
